@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Sim</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div class="navbar-area">
+        <div class="social-media-bar">
+            <div class="container social-media-row">
+                <div class="row ">
+                    <div class="col-4 col-md-6 d-flex justify-content-start align-items-center">
+                        <ul class="social-media-list">
+                            <li>
+                                <a href="#"><i class='bx bxl-facebook social-media-icon'></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class='bx bxl-twitter social-media-icon'></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class='bx bxl-instagram social-media-icon'></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class='bx bxl-youtube social-media-icon'></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class='bx bxl-linkedin social-media-icon'></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-8 col-md-6 d-flex justify-content-end align-items-center">
+                        <ul class="social-media-list">
+                            <li>
+                                <a href="#" class="social-media-item"><i class='bx bx-phone social-media-icon'></i>0 505
+                                    555
+                                    55 55</a>
+                            </li>
+                            <li>
+                                <a href="mailto:medyayazilim@gmail.com" class="social-media-item"><i
+                                        class='bx bx-envelope social-media-icon'></i>medyayazilim@gmail.com</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <nav class="navbar navbar-expand-lg navbar-light  shadow-sm">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="#">
+                    <img src="assets/logo.png" alt="logo" class="logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+
+                        <li class="nav-item dropdown position-relative">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdownMenu" role="button">
+                                Nasıl Çalışır?
+                                <i class='bx bx-chevron-down'></i>
+                            </a>
+                            <ul class="dropdown-menu position-absolute" aria-labelledby="dropdownMenu">
+                                <li><a class="dropdown-item" href="#">Nasıl Çalışır?</a></li>
+                                <li><a class="dropdown-item" href="#">Nasıl Çalışır?</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown position-relative">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdownMenu" role="button">
+                                Hakkımızda
+                                <i class='bx bx-chevron-down'></i>
+                            </a>
+                            <ul class="dropdown-menu position-absolute" aria-labelledby="dropdownMenu">
+                                <li><a class="dropdown-item" href="#">Şirket Profili</a></li>
+                                <li><a class="dropdown-item" href="#">Ekibimiz</a></li>
+                                <li><a class="dropdown-item" href="#">Kariyer</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link y ms-2" href="#">
+                                <i class='bx bx-user'></i>
+                                Üye Ol / Giriş Yap
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- HEADER / HERO -->
+    <section class="hero-section">
+        <div class="background-shapes">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="floating-icons">
+            <i class='bx bx-wifi'></i>
+            <i class='bx bx-world'></i>
+            <i class='bx bx-mobile-alt'></i>
+            <i class='bx bx-signal-5'></i>
+        </div>
+
+        <div class="container position-relative z-2">
+            <div class="hero-icon fade-in-up icon-float pulse">
+                <i class='bx bx-world'></i>
+            </div>
+
+            <h1 class="fade-in-up delay-1">Dünya ile Bağlantınız Buradan Başlıyor</h1>
+
+            <p class="lead fade-in-up delay-2 mb-4">Anında eSIM ile 200'den fazla ülkede internete erişin. Uygun
+                fiyatlı, kolay ve güvenli.</p>
+
+            <div class="feature-icons fade-in-up delay-3">
+                <div class="feature-item">
+                    <i class='bx bx-rocket icon-float'></i>
+                    <span>Anında Aktivasyon</span>
+                </div>
+                <div class="feature-item">
+                    <i class='bx bx-check-shield icon-float'></i>
+                    <span>Güvenli Bağlantı</span>
+                </div>
+                <div class="feature-item">
+                    <i class='bx bx-money icon-float'></i>
+                    <span>Uygun Fiyat</span>
+                </div>
+                <div class="feature-item">
+                    <i class='bx bx-support icon-float'></i>
+                    <span>7/24 Destek</span>
+                </div>
+            </div>
+
+            <a href="#" class="btn btn-light btn-lg hero-btn fade-in-up delay-4">
+                <i class='bx bx-play-circle me-2'></i>
+                Hemen Başla
+            </a>
+        </div>
+    </section>
+
+    <section id="popular-countries" class="py-5 bg-white">
+        <div class="container text-center">
+            <h2 class="section-title fade-in-title">Popüler Ülkeler</h2>
+            <div class="title-underline"></div>
+            <p class="text-muted my-4">En çok tercih edilen ülkelerden bazıları</p>
+
+            <!-- Grid -->
+            <div class="row g-3 justify-content-center" id="country-container">
+                <!-- İlk 25 ülke -->
+                <!-- Her ülke kartı -->
+                <!-- 1 -->
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="fade-up">
+                    <div class="card border-0 shadow-sm rounded-4 country-card h-100 text-center py-3">
+                        <img src="https://flagcdn.com/w40/tr.png" width="32" alt="Türkiye Bayrağı">
+                        <div class="text-dark fw-medium">Türkiye</div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="fade-up">
+                    <div class="card border-0 shadow-sm rounded-4 country-card h-100 text-center py-3">
+
+                        <img src="https://flagcdn.com/w40/us.png" width="32" alt="Amerika Bayrağı">
+                        <div class="text-dark fw-medium">Amerika</div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="fade-up">
+                    <div class="card border-0 shadow-sm rounded-4 country-card h-100 text-center py-3">
+
+                        <img src="https://flagcdn.com/w40/gb.png" width="32" alt="İngiltere Bayrağı">
+                        <div class="text-dark fw-medium">İngiltere</div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="fade-up">
+                    <div class="card border-0 shadow-sm rounded-4 country-card h-100 text-center py-3">
+                        <img src="https://flagcdn.com/w40/de.png" width="32" alt="Almanya Bayrağı">
+                        <div class="text-dark fw-medium">Almanya</div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="fade-up">
+                    <div class="card border-0 shadow-sm rounded-4 country-card h-100 text-center py-3">
+
+                        <img src="https://flagcdn.com/w40/fr.png" width="32" alt="Fransa Bayrağı">
+                        <div class="text-dark fw-medium">Fransa</div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="fade-up">
+                    <div class="card border-0 shadow-sm rounded-4 country-card h-100 text-center py-3">
+
+                        <img src="https://flagcdn.com/w40/it.png" width="32" alt="İtalya Bayrağı">
+                        <div class="text-dark fw-medium">İtalya</div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="fade-up">
+                    <div class="card border-0 shadow-sm rounded-4 country-card h-100 text-center py-3">
+                        <img src="https://flagcdn.com/w40/es.png" width="32" alt="İspanya Bayrağı">
+                        <div class="text-dark fw-medium">İspanya</div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="fade-up">
+                    <div class="card border-0 shadow-sm rounded-4 country-card h-100 text-center py-3">
+                        <img src="https://flagcdn.com/w40/ca.png" width="32" alt="Kanada Bayrağı">
+                        <div class="text-dark fw-medium">Kanada</div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="fade-up">
+                    <div class="card border-0 shadow-sm rounded-4 country-card h-100 text-center py-3">
+                        <img src="https://flagcdn.com/w40/au.png" width="32" alt="Avustralya Bayrağı">
+                        <div class="text-dark fw-medium">Avustralya</div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="fade-up">
+                    <div class="card border-0 shadow-sm rounded-4 country-card h-100 text-center py-3">
+                        <img src="https://flagcdn.com/w40/br.png" width="32" alt="Brezilya Bayrağı">
+                        <div class="text-dark fw-medium">Brezilya</div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="fade-up">
+                    <div class="card border-0 shadow-sm rounded-4 country-card h-100 text-center py-3">
+                        <img src="https://flagcdn.com/w40/ru.png" width="32" alt="Rusya Bayrağı">
+                        <div class="text-dark fw-medium">Rusya</div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="fade-up">
+                    <div class="card border-0 shadow-sm rounded-4 country-card h-100 text-center py-3">
+                        <img src="https://flagcdn.com/w40/jp.png" width="32" alt="Japonya Bayrağı">
+                        <div class="text-dark fw-medium">Japonya</div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="fade-up">
+                    <div class="card border-0 shadow-sm rounded-4 country-card h-100 text-center py-3">
+                        <img src="https://flagcdn.com/w40/kr.png" width="32" alt="Güney Kore Bayrağı">
+                        <div class="text-dark fw-medium">Güney Kore</div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="fade-up">
+                    <div class="card border-0 shadow-sm rounded-4 country-card h-100 text-center py-3">
+                        <img src="https://flagcdn.com/w40/in.png" width="32" alt="Hindistan Bayrağı">
+                        <div class="text-dark fw-medium">Hindistan</div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="fade-up">
+                    <div class="card border-0 shadow-sm rounded-4 country-card h-100 text-center py-3">
+                        <img src="https://flagcdn.com/w40/cn.png" width="32" alt="Çin Bayrağı">
+                        <div class="text-dark fw-medium">Çin</div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="fade-up">
+                    <div class="card border-0 shadow-sm rounded-4 country-card h-100 text-center py-3">
+                        <img src="https://flagcdn.com/w40/se.png" width="32" alt="İsveç Bayrağı">
+                        <div class="text-dark fw-medium">İsveç</div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="fade-up">
+                    <div class="card border-0 shadow-sm rounded-4 country-card h-100 text-center py-3">
+                        <img src="https://flagcdn.com/w40/nl.png" width="32" alt="Hollanda Bayrağı">
+                        <div class="text-dark fw-medium">Hollanda</div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="fade-up">
+                    <div class="card border-0 shadow-sm rounded-4 country-card h-100 text-center py-3">
+                        <img src="https://flagcdn.com/w40/be.png" width="32" alt="Belçika Bayrağı">
+                        <div class="text-dark fw-medium">Belçika</div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="fade-up">
+                    <div class="card border-0 shadow-sm rounded-4 country-card h-100 text-center py-3">
+                        <img src="https://flagcdn.com/w40/no.png" width="32" alt="Norveç Bayrağı">
+                        <div class="text-dark fw-medium">Norveç</div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="fade-up">
+                    <div class="card border-0 shadow-sm rounded-4 country-card h-100 text-center py-3">
+                        <img src="https://flagcdn.com/w40/dk.png" width="32" alt="Danimarka Bayrağı">
+                        <div class="text-dark fw-medium">Danimarka</div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="fade-up">
+                    <div class="card border-0 shadow-sm rounded-4 country-card h-100 text-center py-3">
+                        <img src="https://flagcdn.com/w40/fi.png" width="32" alt="Finlandiya Bayrağı">
+                        <div class="text-dark fw-medium">Finlandiya</div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="fade-up">
+                    <div class="card border-0 shadow-sm rounded-4 country-card h-100 text-center py-3">
+
+                        <img src="https://flagcdn.com/w40/ch.png" width="32" alt="İsviçre Bayrağı">
+                        <div class="text-dark fw-medium">İsviçre</div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="fade-up">
+                    <div class="card border-0 shadow-sm rounded-4 country-card h-100 text-center py-3">
+
+                        <img src="https://flagcdn.com/w40/at.png" width="32" alt="Avusturya Bayrağı">
+                        <div class="text-dark fw-medium">Avusturya</div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="fade-up">
+                    <div class="card border-0 shadow-sm rounded-4 country-card h-100 text-center py-3">
+                        <img src="https://flagcdn.com/w40/pt.png" width="32" alt="Portekiz Bayrağı">
+                        <div class="text-dark fw-medium">Portekiz</div>
+                    </div>
+                </div>
+
+                <!-- ... 22 tane daha benzer ülke -->
+
+                <!-- Gizli 25 ülke -->
+                <div class="more-countries" style="display: none;">
+                    <div class="row g-3 justify-content-center">
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="fade-up">
+                            <div class="card border-0 shadow-sm rounded-4 country-card h-100 text-center py-3">
+                                <img src="https://flagcdn.com/w40/ae.png" width="32"
+                                    alt="Birleşik Arap Emirlikleri Bayrağı">
+                                <div class="text-dark fw-medium">Birleşik Arap Emirlikleri</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="fade-up">
+                            <div class="card border-0 shadow-sm rounded-4 country-card h-100 text-center py-3">
+                                <img src="https://flagcdn.com/w40/sa.png" width="32" alt="Suudi Arabistan Bayrağı">
+                                <div class="text-dark fw-medium">Suudi Arabistan</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="fade-up">
+                            <div class="card border-0 shadow-sm rounded-4 country-card h-100 text-center py-3">
+                                <img src="https://flagcdn.com/w40/qa.png" width="32" alt="Katar Bayrağı">
+                                <div class="text-dark fw-medium">Katar</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="fade-up">
+                            <div class="card border-0 shadow-sm rounded-4 country-card h-100 text-center py-3">
+                                <img src="https://flagcdn.com/w40/eg.png" width="32" alt="Mısır Bayrağı">
+                                <div class="text-dark fw-medium">Mısır</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="fade-up">
+                            <div class="card border-0 shadow-sm rounded-4 country-card h-100 text-center py-3">
+                                <img src="https://flagcdn.com/w40/za.png" width="32" alt="Güney Afrika Bayrağı">
+                                <div class="text-dark fw-medium">Güney Afrika</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="fade-up">
+                            <div class="card border-0 shadow-sm rounded-4 country-card h-100 text-center py-3">
+                                <img src="https://flagcdn.com/w40/mx.png" width="32" alt="Meksika Bayrağı">
+                                <div class="text-dark fw-medium">Meksika</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="fade-up">
+                            <div class="card border-0 shadow-sm rounded-4 country-card h-100 text-center py-3">
+                                <img src="https://flagcdn.com/w40/ar.png" width="32" alt="Arjantin Bayrağı">
+                                <div class="text-dark fw-medium">Arjantin</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="fade-up">
+                            <div class="card border-0 shadow-sm rounded-4 country-card h-100 text-center py-3">
+                                <img src="https://flagcdn.com/w40/co.png" width="32" alt="Kolombiya Bayrağı">
+                                <div class="text-dark fw-medium">Kolombiya</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="fade-up">
+                            <div class="card border-0 shadow-sm rounded-4 country-card h-100 text-center py-3">
+                                <img src="https://flagcdn.com/w40/cl.png" width="32" alt="Şili Bayrağı">
+                                <div class="text-dark fw-medium">Şili</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="fade-up">
+                            <div class="card border-0 shadow-sm rounded-4 country-card h-100 text-center py-3">
+                                <img src="https://flagcdn.com/w40/nz.png" width="32" alt="Yeni Zelanda Bayrağı">
+                                <div class="text-dark fw-medium">Yeni Zelanda</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="fade-up">
+                            <div class="card border-0 shadow-sm rounded-4 country-card h-100 text-center py-3">
+                                <img src="https://flagcdn.com/w40/id.png" width="32" alt="Endonezya Bayrağı">
+                                <div class="text-dark fw-medium">Endonezya</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="fade-up">
+                            <div class="card border-0 shadow-sm rounded-4 country-card h-100 text-center py-3">
+                                <img src="https://flagcdn.com/w40/my.png" width="32" alt="Malezya Bayrağı">
+                                <div class="text-dark fw-medium">Malezya</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="fade-up">
+                            <div class="card border-0 shadow-sm rounded-4 country-card h-100 text-center py-3">
+                                <img src="https://flagcdn.com/w40/ph.png" width="32" alt="Filipinler Bayrağı">
+                                <div class="text-dark fw-medium">Filipinler</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="fade-up">
+                            <div class="card border-0 shadow-sm rounded-4 country-card h-100 text-center py-3">
+                                <img src="https://flagcdn.com/w40/vn.png" width="32" alt="Vietnam Bayrağı">
+                                <div class="text-dark fw-medium">Vietnam</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="fade-up">
+                            <div class="card border-0 shadow-sm rounded-4 country-card h-100 text-center py-3">
+                                <img src="https://flagcdn.com/w40/th.png" width="32" alt="Tayland Bayrağı">
+                                <div class="text-dark fw-medium">Tayland</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="fade-up">
+                            <div class="card border-0 shadow-sm rounded-4 country-card h-100 text-center py-3">
+                                <img src="https://flagcdn.com/w40/sg.png" width="32" alt="Singapur Bayrağı">
+                                <div class="text-dark fw-medium">Singapur</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="fade-up">
+                            <div class="card border-0 shadow-sm rounded-4 country-card h-100 text-center py-3">
+                                <img src="https://flagcdn.com/w40/pl.png" width="32" alt="Polonya Bayrağı">
+                                <div class="text-dark fw-medium">Polonya</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="fade-up">
+                            <div class="card border-0 shadow-sm rounded-4 country-card h-100 text-center py-3">
+                                <img src="https://flagcdn.com/w40/gr.png" width="32" alt="Yunanistan Bayrağı">
+                                <div class="text-dark fw-medium">Yunanistan</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="fade-up">
+                            <div class="card border-0 shadow-sm rounded-4 country-card h-100 text-center py-3">
+                                <img src="https://flagcdn.com/w40/ro.png" width="32" alt="Romanya Bayrağı">
+                                <div class="text-dark fw-medium">Romanya</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="fade-up">
+                            <div class="card border-0 shadow-sm rounded-4 country-card h-100 text-center py-3">
+                                <img src="https://flagcdn.com/w40/cz.png" width="32" alt="Çekya Bayrağı">
+                                <div class="text-dark fw-medium">Çekya</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="fade-up">
+                            <div class="card border-0 shadow-sm rounded-4 country-card h-100 text-center py-3">
+                                <img src="https://flagcdn.com/w40/hu.png" width="32" alt="Macaristan Bayrağı">
+                                <div class="text-dark fw-medium">Macaristan</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="fade-up">
+                            <div class="card border-0 shadow-sm rounded-4 country-card h-100 text-center py-3">
+                                <img src="https://flagcdn.com/w40/bg.png" width="32" alt="Bulgaristan Bayrağı">
+                                <div class="text-dark fw-medium">Bulgaristan</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="fade-up">
+                            <div class="card border-0 shadow-sm rounded-4 country-card h-100 text-center py-3">
+                                <img src="https://flagcdn.com/w40/hr.png" width="32" alt="Hırvatistan Bayrağı">
+                                <div class="text-dark fw-medium">Hırvatistan</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="fade-up">
+                            <div class="card border-0 shadow-sm rounded-4 country-card h-100 text-center py-3">
+                                <img src="https://flagcdn.com/w40/sk.png" width="32" alt="Slovakya Bayrağı">
+                                <div class="text-dark fw-medium">Slovakya</div>
+                            </div>
+                        </div>
+                        <!-- Diğer 20 ülke kartı buraya aynı yapıyla eklenebilir -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Buton -->
+            <div class="text-center mt-4">
+                <button class="btn btn-outline-primary rounded-pill px-4" id="toggleMoreBtn">
+                    Daha Fazla Göster
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="section-title fade-in-title">Neden Bizi Tercih Etmelisiniz?</h2>
+                    <div class="title-underline"></div>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card text-center" data-aos="fade-up" data-aos-delay="100">
+                        <div class="feature-card-inner">
+                            <div class="feature-icon-wrapper mb-4">
+                                <div class="feature-icon-bg"></div>
+                                <i class='bx bx-world feature-icon'></i>
+                                <div class="feature-icon-overlay"></div>
+                            </div>
+                            <h5 class="feature-title mb-3">Global Kapsama</h5>
+                            <p class="feature-description">200'den fazla ülkede anında bağlantı. Dünyanın her yerinde
+                                kesintisiz internet deneyimi.</p>
+                            <div class="feature-stats">
+                                <span class="stat-number">200+</span>
+                                <span class="stat-label">Ülke</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card text-center" data-aos="fade-up" data-aos-delay="200">
+                        <div class="feature-card-inner">
+                            <div class="feature-icon-wrapper mb-4">
+                                <div class="feature-icon-bg"></div>
+                                <i class='bx bx-rocket feature-icon'></i>
+                                <div class="feature-icon-overlay"></div>
+                            </div>
+                            <h5 class="feature-title mb-3">Anında Aktivasyon</h5>
+                            <p class="feature-description">eSIM'inizi dakikalar içinde kullanmaya başlayın. Fiziksel SIM
+                                kart beklemeye gerek yok.</p>
+                            <div class="feature-stats">
+                                <span class="stat-number">5</span>
+                                <span class="stat-label">Dakika</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card text-center" data-aos="fade-up" data-aos-delay="300">
+                        <div class="feature-card-inner">
+                            <div class="feature-icon-wrapper mb-4">
+                                <div class="feature-icon-bg"></div>
+                                <i class='bx bx-money feature-icon'></i>
+                                <div class="feature-icon-overlay"></div>
+                            </div>
+                            <h5 class="feature-title mb-3">Uygun Fiyatlar</h5>
+                            <p class="feature-description">Seyahat sırasında yüksek dolaşım ücretlerine son! %90'a varan
+                                tasarruf imkanı.</p>
+                            <div class="feature-stats">
+                                <span class="stat-number">90%</span>
+                                <span class="stat-label">Tasarruf</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-it-works py-5 bg-white">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <h2 class="section-title fade-in-title">Nasıl Çalışır?</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="row g-4 text-center">
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="step-card h-100 shadow-sm">
+                        <div class="step-icon-wrapper mb-4">
+                            <div class="step-icon-bg"></div>
+                            <i class="bx bx-cart-alt step-icon"></i>
+                        </div>
+                        <h5 class="step-title mb-2">1. Paket Seç</h5>
+                        <p class="step-desc">İhtiyacına uygun veri paketini kolayca seç.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="step-card h-100 shadow-sm">
+                        <div class="step-icon-wrapper mb-4">
+                            <div class="step-icon-bg"></div>
+                            <i class="bx bx-envelope-open step-icon"></i>
+                        </div>
+                        <h5 class="step-title mb-2">2. QR Kodu Al</h5>
+                        <p class="step-desc">eSIM QR kodun anında e-posta ile gönderilir.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="step-card h-100 shadow-sm">
+                        <div class="step-icon-wrapper mb-4">
+                            <div class="step-icon-bg"></div>
+                            <i class="bx bx-wifi step-icon"></i>
+                        </div>
+                        <h5 class="step-title mb-2">3. Bağlan</h5>
+                        <p class="step-desc">Telefonuna eSIM'i ekle ve internete bağlan.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials-section py-5 bg-light">
+        <div class="container">
+          <div class="row text-center mb-5">
+            <h2 class="section-title fade-in-title">Müşteriler Ne Diyor?</h2>
+            <div class="title-underline"></div>
+          </div>
+          <div class="row g-4">
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+              <div class="testimonial-card bg-soft-1 text-center">
+                <div class="testimonial-icon mb-3">
+                  <i class="bx bxs-user-circle"></i>
+                </div>
+                <p class="testimonial-text">"Fransa’da 2 haftalık seyahatimde kullandım. Kurulum inanılmaz kolaydı, internet hızlıydı."</p>
+                <div class="testimonial-name">- Ayşe K.</div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+              <div class="testimonial-card bg-soft-1 text-center">
+                <div class="testimonial-icon mb-3">
+                  <i class="bx bxs-user-circle"></i>
+                </div>
+                <p class="testimonial-text">"Fiziksel SIM kartla uğraşmıyorum. QR kodla her şey halloldu."</p>
+                <div class="testimonial-name">- Mehmet A.</div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+              <div class="testimonial-card bg-soft-1 text-center">
+                <div class="testimonial-icon mb-3">
+                  <i class="bx bxs-user-circle"></i>
+                </div>
+                <p class="testimonial-text">"Yurt dışında internet sıkıntısı tamamen bitti. Çok uygun fiyatlar."</p>
+                <div class="testimonial-name">- Zeynep T.</div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+              <div class="testimonial-card bg-soft-1 text-center">
+                <div class="testimonial-icon mb-3">
+                  <i class="bx bxs-user-circle"></i>
+                </div>
+                <p class="testimonial-text">"5 dakikada aktif oldu. Bu kadar kolay olacağını sanmazdım."</p>
+                <div class="testimonial-name">- Burak D.</div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+              <div class="testimonial-card bg-soft-1 text-center">
+                <div class="testimonial-icon mb-3">
+                  <i class="bx bxs-user-circle"></i>
+                </div>
+                <p class="testimonial-text">"Müşteri hizmetleri harika. Tüm süreci sabırla anlattılar."</p>
+                <div class="testimonial-name">- Selin Y.</div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+              <div class="testimonial-card bg-soft-1 text-center">
+                <div class="testimonial-icon mb-3">
+                  <i class="bx bxs-user-circle"></i>
+                </div>
+                <p class="testimonial-text">"Her ülkede sorunsuz çalıştı. Japonya’da bile çekim mükemmeldi."</p>
+                <div class="testimonial-name">- Onur E.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      
+
+
+      <footer class="footer bg-dark text-white pt-5 pb-4">
+        <div class="container">
+          <div class="row mb-4">
+            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+              <h5 class="footer-title">eSIMHızlı</h5>
+              <p class="small">Seyahatinizde hızlı, uygun fiyatlı ve sorunsuz internetin adresi. Global kapsama ile her yerde bağlı kalın.</p>
+            </div>
+            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+              <h6 class="footer-heading">Hızlı Linkler</h6>
+              <ul class="list-unstyled small">
+                <li><a href="#populer" class="footer-link">Popüler Ülkeler</a></li>
+                <li><a href="#neden" class="footer-link">Neden Biz?</a></li>
+                <li><a href="#nasıl" class="footer-link">Nasıl Çalışır?</a></li>
+                <li><a href="#yorumlar" class="footer-link">Yorumlar</a></li>
+              </ul>
+            </div>
+            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+              <h6 class="footer-heading">İletişim</h6>
+              <ul class="list-unstyled small">
+                <li><i class="bx bx-envelope me-2"></i> destek@esimhizli.com</li>
+                <li><i class="bx bx-map me-2"></i> İstanbul, Türkiye</li>
+              </ul>
+              <div class="social-icons mt-3">
+                <a href="#" class="social-icon"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="social-icon"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="bx bxl-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="row text-center">
+            <div class="col-12">
+              <p class="small mb-0">&copy; 2025 eSIMHızlı. Tüm hakları saklıdır.</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+      
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+
+</html>
