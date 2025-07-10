@@ -60,12 +60,14 @@ body {
     right: 0;
     z-index: 1000;
     width: 100%;
-    transition: transform 0.4s ease; /* Yumuşak geçiş */
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    transition: transform 0.4s ease;
+    /* Yumuşak geçiş */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
+
 .navbar-hidden {
     transform: translateY(-100%);
-  }
+}
 
 .logo {
     width: 140px;
@@ -1069,43 +1071,344 @@ h1 {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: #fff;
     font-size: 0.95rem;
-  }
-  
-  .footer-title {
+}
+
+.footer-title {
     font-size: 1.5rem;
     font-weight: 600;
     color: #ffffff;
-  }
-  
-  .footer-heading {
+}
+
+.footer-heading {
     font-size: 1.1rem;
     font-weight: 600;
     margin-bottom: 15px;
     color: #ffffff;
-  }
-  
-  .footer-link {
+}
+
+.footer-link {
     color: #ccc;
     text-decoration: none;
     display: block;
     margin-bottom: 8px;
     transition: color 0.3s ease;
-  }
-  
-  .footer-link:hover {
+}
+
+.footer-link:hover {
     color: #667eea;
-  }
-  
-  .social-icons a {
+}
+
+.social-icons a {
     display: inline-block;
     font-size: 1.3rem;
     color: #ccc;
     margin-right: 12px;
     transition: transform 0.3s ease, color 0.3s ease;
-  }
-  
-  .social-icons a:hover {
+}
+
+.social-icons a:hover {
     transform: scale(1.2);
     color: #667eea;
-  }
-  
+}
+
+
+
+.country-navbar {
+    background: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+}
+
+.country-breadcrumb {
+    background: transparent;
+    padding: 0;
+    margin: 0;
+}
+
+.country-breadcrumb-item+.country-breadcrumb-item::before {
+    content: ">";
+    color: var(--text-muted);
+}
+
+.country-header {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    padding: 3rem 0;
+    border-radius: 20px;
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.country-header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+    animation: countryFloat 20s linear infinite;
+}
+
+@keyframes countryFloat {
+    0% {
+        transform: translateX(-100px) translateY(-100px) rotate(0deg);
+    }
+
+    100% {
+        transform: translateX(0) translateY(0) rotate(360deg);
+    }
+}
+
+.country-flag {
+    width: 64px;
+    height: 64px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    object-fit: cover;
+    border: 3px solid white;
+}
+
+.country-package-card {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: none;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+}
+
+.country-package-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.country-package-card.popular {
+    border: 2px solid #667eea;
+    position: relative;
+}
+
+.country-package-card.popular::before {
+    content: 'EN POPÜLER';
+    position: absolute;
+    top: 15px;
+    right: -30px;
+    background: #667eea;
+    color: white;
+    padding: 5px 40px;
+    font-size: 12px;
+    font-weight: bold;
+    transform: rotate(45deg);
+    z-index: 10;
+}
+
+.country-package-header {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    position: relative;
+}
+
+.country-package-header h5 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.country-package-body {
+    padding: 2rem 1.5rem;
+}
+
+.country-package-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.country-package-info:last-child {
+    border-bottom: none;
+}
+
+.country-package-info .icon {
+    width: 40px;
+    height: 40px;
+    background: rgba(199, 54, 80, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(#667eea);
+    font-size: 1.1rem;
+}
+
+.country-package-info .label {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-left: 1rem;
+    flex-grow: 1;
+}
+
+.country-package-info .value {
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.country-price {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(#667eea);
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.country-btn-primary {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;	
+    border: none;
+    border-radius: 15px;
+    padding: 1rem 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.country-btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(199, 54, 80, 0.3);
+}
+
+.country-btn-outline-primary {
+    border: 2px solid #667eea;
+    color: #667eea;
+    background: transparent;
+    border-radius: 15px;
+    padding: 1rem 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.country-btn-outline-primary:hover {
+    background: #667eea;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.country-features-section {
+    background: white;
+    border-radius: 20px;
+    padding: 3rem 2rem;
+    margin: 3rem 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.country-feature-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: rgba(199, 54, 80, 0.05);
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.country-feature-item:hover {
+    transform: translateX(10px);
+    background: rgba(199, 54, 80, 0.1);
+}
+
+.country-feature-icon {
+    width: 50px;
+    height: 50px;
+    background: #667eea;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.3rem;
+    margin-right: 1rem;
+}
+
+.country-stats-section {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    padding: 3rem 2rem;
+    border-radius: 20px;
+    margin: 3rem 0;
+}
+
+.country-stat-item {
+    text-align: center;
+    padding: 1rem;
+}
+
+.country-stat-number {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+
+.country-stat-label {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.country-section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+}
+
+.country-section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-radius: 2px;
+}
+
+.country-coverage-info {
+    background: linear-gradient(135deg, #28a745, #20c997);
+    color: white;
+    padding: 2rem;
+    border-radius: 20px;
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.country-coverage-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    .country-header {
+        padding: 2rem 0;
+    }
+
+    .country-package-card {
+        margin-bottom: 2rem;
+    }
+
+    .country-section-title {
+        font-size: 2rem;
+    }
+}
