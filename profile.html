@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil - eSIM Türkiye</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="navbar-area">
+        <!-- Top Bar -->
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-bar-content">
+                    <div class="social-links">
+                        <a href="#" data-bs-toggle="tooltip" title="Facebook">
+                            <i class='bx bxl-facebook'></i>
+                        </a>
+                        <a href="#" data-bs-toggle="tooltip" title="Twitter">
+                            <i class='bx bxl-twitter'></i>
+                        </a>
+                        <a href="#" data-bs-toggle="tooltip" title="Instagram">
+                            <i class='bx bxl-instagram'></i>
+                        </a>
+                        <a href="#" data-bs-toggle="tooltip" title="YouTube">
+                            <i class='bx bxl-youtube'></i>
+                        </a>
+                        <a href="#" data-bs-toggle="tooltip" title="LinkedIn">
+                            <i class='bx bxl-linkedin'></i>
+                        </a>
+                    </div>
+                    <div class="contact-info">
+                        <a href="tel:+908505320000" class="contact-item">
+                            <i class='bx bx-phone'></i>
+                            <span>0 850 532 0000</span>
+                        </a>
+                        <a href="mailto:destek@esim.com.tr" class="contact-item">
+                            <i class='bx bx-envelope'></i>
+                            <span>destek@esim.com.tr</span>
+                        </a>
+                        <a href="#" class="contact-item d-none d-md-block">
+                            <i class='bx bx-support'></i>
+                            <span>7/24 Destek</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Navbar -->
+        <nav class="navbar navbar-expand-lg main-navbar">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <div class="logo">e</div>
+                    <span>eSIM Türkiye</span>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <i class='bx bx-menu navbar-toggler-icon'></i>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <div class="navbar-nav ms-auto">
+                        <div class="dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button">
+                                <i class='bx bx-sim'></i>
+                                eSIM Paketleri
+                                <i class='bx bx-chevron-down'></i>
+                            </a>
+                            <div class="mega-menu">
+                                <div class="mega-menu-content">
+                                    <div class="mega-menu-section">
+                                        <h6>Yurtiçi Paketler</h6>
+                                        <ul>
+                                            <li><a href="#"><i class='bx bx-data'></i>Günlük Paketler</a></li>
+                                            <li><a href="#"><i class='bx bx-calendar'></i>Haftalık Paketler</a></li>
+                                            <li><a href="#"><i class='bx bx-calendar-alt'></i>Aylık Paketler</a></li>
+                                            <li><a href="#"><i class='bx bx-infinite'></i>Limitsiz Paketler</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="mega-menu-section">
+                                        <h6>Uluslararası Paketler</h6>
+                                        <ul>
+                                            <li><a href="#"><i class='bx bx-world'></i>Avrupa Paketleri</a></li>
+                                            <li><a href="#"><i class='bx bx-globe'></i>Amerika Paketleri</a></li>
+                                            <li><a href="#"><i class='bx bx-map'></i>Asya Paketleri</a></li>
+                                            <li><a href="#"><i class='bx bx-planet'></i>Dünya Geneli</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button">
+                                <i class='bx bx-help-circle'></i>
+                                Nasıl Çalışır?
+                                <i class='bx bx-chevron-down'></i>
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">
+                                    <i class='bx bx-info-circle'></i>
+                                    eSIM Nedir?
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class='bx bx-download'></i>
+                                    Nasıl Yüklenir?
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class='bx bx-cog'></i>
+                                    Kurulum Rehberi
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class='bx bx-mobile'></i>
+                                    Uyumlu Cihazlar
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button">
+                                <i class='bx bx-support'></i>
+                                Destek
+                                <i class='bx bx-chevron-down'></i>
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">
+                                    <i class='bx bx-question-mark'></i>
+                                    Sık Sorulan Sorular
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class='bx bx-chat'></i>
+                                    Canlı Destek
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class='bx bx-book'></i>
+                                    Kullanım Kılavuzu
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class='bx bx-phone-call'></i>
+                                    İletişim
+                                </a>
+                            </div>
+                        </div>
+                        <div class="dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button">
+                                <i class='bx bx-building'></i>
+                                Kurumsal
+                                <i class='bx bx-chevron-down'></i>
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">
+                                    <i class='bx bx-info-circle'></i>
+                                    Hakkımızda
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class='bx bx-briefcase'></i>
+                                    Kurumsal Çözümler
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class='bx bx-notepad'></i>
+                                    Partnerlik
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class='bx bx-news'></i>
+                                    Haberler
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" role="button">
+                                <i class='bx bx-user-circle'></i>
+                                Mehmet Yılmaz
+                                <i class='bx bx-chevron-down'></i>
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="profile.html">
+                                    <i class='bx bx-user'></i>
+                                    Profil
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class='bx bx-package'></i>
+                                    Paketlerim
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class='bx bx-history'></i>
+                                    Geçmiş
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">
+                                    <i class='bx bx-log-out'></i>
+                                    Çıkış Yap
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Profile Header -->
+    <section class="profile-header" style="margin-top: 100px;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <div class="profile-header-content" data-aos="fade-right">
+                        <div class="profile-avatar">
+                            <div class="avatar-image">
+                                <i class='bx bx-user'></i>
+                            </div>
+                            <div class="avatar-status online"></div>
+                        </div>
+                        <div class="profile-info">
+                            <h1 class="profile-name">Mehmet Yılmaz</h1>
+                            <p class="profile-email">mehmet.yilmaz@email.com</p>
+                            <p class="profile-member-since">Üye olma tarihi: 15 Mart 2023</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="profile-stats mt-4 mt-md-0" data-aos="fade-left">
+                        <div class="stat-item">
+                            <div class="stat-number">12</div>
+                            <div class="stat-label">Aktif Paket</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">45</div>
+                            <div class="stat-label">Toplam Paket</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">28</div>
+                            <div class="stat-label">Ülke</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profile Content -->
+    <section class="profile-content">
+        <div class="container">
+            <div class="row">
+                <!-- Sidebar -->
+                <div class="col-lg-3 col-md-4">
+                    <div class="profile-sidebar" data-aos="fade-right">
+                        <div class="sidebar-menu">
+                            <a href="#profile-info" class="sidebar-item active" data-target="profile-info">
+                                <i class='bx bx-user'></i>
+                                <span>Profil Bilgileri</span>
+                            </a>
+                            <a href="#esim-packages" class="sidebar-item" data-target="esim-packages">
+                                <i class='bx bx-package'></i>
+                                <span>eSIM Paketleri</span>
+                            </a>
+                            <a href="#package-history" class="sidebar-item" data-target="package-history">
+                                <i class='bx bx-history'></i>
+                                <span>Paket Geçmişi</span>
+                            </a>
+                            <a href="#account-settings" class="sidebar-item" data-target="account-settings">
+                                <i class='bx bx-cog'></i>
+                                <span>Hesap Ayarları</span>
+                            </a>
+                            <a href="#billing" class="sidebar-item" data-target="billing">
+                                <i class='bx bx-credit-card'></i>
+                                <span>Fatura & Ödeme</span>
+                            </a>
+                            <a href="#support" class="sidebar-item" data-target="support">
+                                <i class='bx bx-support'></i>
+                                <span>Destek</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Content -->
+                <div class="col-lg-9 col-md-8">
+                    <!-- Profile Info Section -->
+                    <div class="profile-section active" id="profile-info" data-aos="fade-left">
+                        <div class="section-header">
+                            <h2>Profil Bilgileri</h2>
+                            <p>Kişisel bilgilerinizi görüntüleyin ve düzenleyin</p>
+                        </div>
+                        <div class="profile-form-container">
+                            <form class="profile-form">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="profile-form-group">
+                                            <label class="profile-form-label">Ad</label>
+                                            <input type="text" class="profile-form-control" value="Mehmet" readonly>
+                                            <i class='bx bx-user profile-input-icon'></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="profile-form-group">
+                                            <label class="profile-form-label">Soyad</label>
+                                            <input type="text" class="profile-form-control" value="Yılmaz" readonly>
+                                            <i class='bx bx-user profile-input-icon'></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="profile-form-group">
+                                            <label class="profile-form-label">E-posta</label>
+                                            <input type="email" class="profile-form-control"
+                                                value="mehmet.yilmaz@email.com" readonly>
+                                            <i class='bx bx-envelope profile-input-icon'></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="profile-form-group">
+                                            <label class="profile-form-label">Telefon</label>
+                                            <input type="tel" class="profile-form-control" value="+90 532 123 45 67"
+                                                readonly>
+                                            <i class='bx bx-phone profile-input-icon'></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="profile-form-group">
+                                            <label class="profile-form-label">Ülke</label>
+                                            <select class="profile-form-control" disabled>
+                                                <option>Türkiye</option>
+                                            </select>
+                                            <i class='bx bx-world profile-input-icon'></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="profile-form-group">
+                                            <label class="profile-form-label">Şehir</label>
+                                            <input type="text" class="profile-form-control" value="İstanbul" readonly>
+                                            <i class='bx bx-map profile-input-icon'></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="profile-form-actions">
+                                            <button type="button" class="btn profile-btn-edit" id="editProfileBtn">
+                                                <i class='bx bx-edit'></i>
+                                                Düzenle
+                                            </button>
+                                            <button type="submit" class="btn profile-btn-save d-none"
+                                                id="saveProfileBtn">
+                                                <i class='bx bx-save'></i>
+                                                Kaydet
+                                            </button>
+                                            <button type="button" class="btn profile-btn-cancel d-none"
+                                                id="cancelProfileBtn">
+                                                <i class='bx bx-x'></i>
+                                                İptal
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- eSIM Packages Section -->
+                    <div class="profile-section" id="esim-packages">
+                        <div class="section-header">
+                            <h2>Aktif eSIM Paketleri</h2>
+                            <p>Şu anda aktif olan eSIM paketleriniz</p>
+                        </div>
+                        <div class="packages-grid">
+                            <div class="package-card active" data-aos="fade-up" data-aos-delay="100">
+                                <div class="package-header">
+                                    <div class="package-country">
+                                        <div class="country-flag">🇹🇷</div>
+                                        <div class="country-info">
+                                            <h4>Türkiye</h4>
+                                            <span class="package-type">Aylık Paket</span>
+                                        </div>
+                                    </div>
+                                    <div class="package-status active">
+                                        <i class='bx bx-check-circle'></i>
+                                        <span>Aktif</span>
+                                    </div>
+                                </div>
+                                <div class="package-details">
+                                    <div class="detail-item">
+                                        <i class='bx bx-data'></i>
+                                        <span>25 GB / 50 GB</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class='bx bx-time'></i>
+                                        <span>15 gün kaldı</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class='bx bx-calendar'></i>
+                                        <span>15 Şub - 15 Mar</span>
+                                    </div>
+                                </div>
+                                <div class="package-actions">
+                                    <button class="btn package-btn-primary" onclick="showPackageDetails('TR001')">
+                                        <i class='bx bx-detail'></i>
+                                        Detaylar
+                                    </button>
+                                    <button class="btn package-btn-secondary">
+                                        <i class='bx bx-refresh'></i>
+                                        Yenile
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="package-card active" data-aos="fade-up" data-aos-delay="200">
+                                <div class="package-header">
+                                    <div class="package-country">
+                                        <div class="country-flag">🇺🇸</div>
+                                        <div class="country-info">
+                                            <h4>Amerika</h4>
+                                            <span class="package-type">Haftalık Paket</span>
+                                        </div>
+                                    </div>
+                                    <div class="package-status active">
+                                        <i class='bx bx-check-circle'></i>
+                                        <span>Aktif</span>
+                                    </div>
+                                </div>
+                                <div class="package-details">
+                                    <div class="detail-item">
+                                        <i class='bx bx-data'></i>
+                                        <span>8 GB / 15 GB</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class='bx bx-time'></i>
+                                        <span>3 gün kaldı</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class='bx bx-calendar'></i>
+                                        <span>10 Mar - 17 Mar</span>
+                                    </div>
+                                </div>
+                                <div class="package-actions">
+                                    <button class="btn package-btn-primary" onclick="showPackageDetails('US001')">
+                                        <i class='bx bx-detail'></i>
+                                        Detaylar
+                                    </button>
+                                    <button class="btn package-btn-secondary">
+                                        <i class='bx bx-refresh'></i>
+                                        Yenile
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="package-card expired" data-aos="fade-up" data-aos-delay="300">
+                                <div class="package-header">
+                                    <div class="package-country">
+                                        <div class="country-flag">🇩🇪</div>
+                                        <div class="country-info">
+                                            <h4>Almanya</h4>
+                                            <span class="package-type">Günlük Paket</span>
+                                        </div>
+                                    </div>
+                                    <div class="package-status expired">
+                                        <i class='bx bx-time-five'></i>
+                                        <span>Süresi Doldu</span>
+                                    </div>
+                                </div>
+                                <div class="package-details">
+                                    <div class="detail-item">
+                                        <i class='bx bx-data'></i>
+                                        <span>2 GB / 5 GB</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class='bx bx-time'></i>
+                                        <span>Süresi doldu</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class='bx bx-calendar'></i>
+                                        <span>5 Mar - 8 Mar</span>
+                                    </div>
+                                </div>
+                                <div class="package-actions">
+                                    <button class="btn package-btn-primary" onclick="showPackageDetails('DE001')">
+                                        <i class='bx bx-detail'></i>
+                                        Detaylar
+                                    </button>
+                                    <button class="btn package-btn-success">
+                                        <i class='bx bx-plus'></i>
+                                        Yeni Paket
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Package History Section -->
+                    <div class="profile-section" id="package-history">
+                        <div class="section-header">
+                            <h2>Paket Geçmişi</h2>
+                            <p>Daha önce satın aldığınız tüm paketler</p>
+                        </div>
+                        <div class="history-filters">
+                            <div class="filter-buttons">
+                                <button class="filter-btn active" data-filter="all">Tümü</button>
+                                <button class="filter-btn" data-filter="active">Aktif</button>
+                                <button class="filter-btn" data-filter="expired">Süresi Dolmuş</button>
+                                <button class="filter-btn" data-filter="cancelled">İptal Edilmiş</button>
+                            </div>
+                            <div class="filter-search">
+                                <input type="text" class="search-input" placeholder="Ülke ara...">
+                                <i class='bx bx-search'></i>
+                            </div>
+                        </div>
+                        <div class="history-table">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Paket</th>
+                                            <th>Ülke</th>
+                                            <th>Veri</th>
+                                            <th>Süre</th>
+                                            <th>Durum</th>
+                                            <th>Fiyat</th>
+                                            <th>İşlemler</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="history-row" data-status="active">
+                                            <td>
+                                                <div class="package-info">
+                                                    <strong>Aylık Premium</strong>
+                                                    <small>TR001</small>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="country-cell">
+                                                    <span class="country-flag">🇹🇷</span>
+                                                    <span>Türkiye</span>
+                                                </div>
+                                            </td>
+                                            <td>50 GB</td>
+                                            <td>30 gün</td>
+                                            <td>
+                                                <span class="status-badge active">Aktif</span>
+                                            </td>
+                                            <td>₺149</td>
+                                            <td>
+                                                <div class="action-buttons">
+                                                    <button class="btn-action" onclick="showPackageDetails('TR001')">
+                                                        <i class='bx bx-detail'></i>
+                                                    </button>
+                                                    <button class="btn-action">
+                                                        <i class='bx bx-download'></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="history-row" data-status="active">
+                                            <td>
+                                                <div class="package-info">
+                                                    <strong>Haftalık Standart</strong>
+                                                    <small>US001</small>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="country-cell">
+                                                    <span class="country-flag">🇺🇸</span>
+                                                    <span>Amerika</span>
+                                                </div>
+                                            </td>
+                                            <td>15 GB</td>
+                                            <td>7 gün</td>
+                                            <td>
+                                                <span class="status-badge active">Aktif</span>
+                                            </td>
+                                            <td>₺89</td>
+                                            <td>
+                                                <div class="action-buttons">
+                                                    <button class="btn-action" onclick="showPackageDetails('US001')">
+                                                        <i class='bx bx-detail'></i>
+                                                    </button>
+                                                    <button class="btn-action">
+                                                        <i class='bx bx-download'></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="history-row" data-status="expired">
+                                            <td>
+                                                <div class="package-info">
+                                                    <strong>Günlük Ekonomik</strong>
+                                                    <small>DE001</small>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="country-cell">
+                                                    <span class="country-flag">🇩🇪</span>
+                                                    <span>Almanya</span>
+                                                </div>
+                                            </td>
+                                            <td>5 GB</td>
+                                            <td>3 gün</td>
+                                            <td>
+                                                <span class="status-badge expired">Süresi Doldu</span>
+                                            </td>
+                                            <td>₺39</td>
+                                            <td>
+                                                <div class="action-buttons">
+                                                    <button class="btn-action" onclick="showPackageDetails('DE001')">
+                                                        <i class='bx bx-detail'></i>
+                                                    </button>
+                                                    <button class="btn-action">
+                                                        <i class='bx bx-refresh'></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Account Settings Section -->
+                    <div class="profile-section" id="account-settings">
+                        <div class="section-header">
+                            <h2>Hesap Ayarları</h2>
+                            <p>Hesap güvenliği ve bildirim ayarları</p>
+                        </div>
+                        <div class="settings-grid">
+                            <div class="setting-card">
+                                <div class="setting-header">
+                                    <i class='bx bx-lock'></i>
+                                    <h4>Şifre Değiştir</h4>
+                                </div>
+                                <p>Hesap güvenliğiniz için düzenli olarak şifrenizi değiştirin</p>
+                                <button class="btn setting-btn" onclick="showChangePassword()">
+                                    <i class='bx bx-edit'></i>
+                                    Şifre Değiştir
+                                </button>
+                            </div>
+                            <div class="setting-card">
+                                <div class="setting-header">
+                                    <i class='bx bx-shield-check'></i>
+                                    <h4>İki Faktörlü Doğrulama</h4>
+                                </div>
+                                <p>Hesabınıza ek güvenlik katmanı ekleyin</p>
+                                <div class="setting-toggle">
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" id="twoFactorAuth">
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                    <span class="toggle-label">Kapalı</span>
+                                </div>
+                            </div>
+                            <div class="setting-card">
+                                <div class="setting-header">
+                                    <i class='bx bx-bell'></i>
+                                    <h4>E-posta Bildirimleri</h4>
+                                </div>
+                                <p>Paket durumu ve promosyonlar hakkında bilgi alın</p>
+                                <div class="setting-toggle">
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" id="emailNotifications" checked>
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                    <span class="toggle-label">Açık</span>
+                                </div>
+                            </div>
+                            <div class="setting-card">
+                                <div class="setting-header">
+                                    <i class='bx bx-mobile'></i>
+                                    <h4>SMS Bildirimleri</h4>
+                                </div>
+                                <p>Önemli güncellemeler için SMS bildirimleri</p>
+                                <div class="setting-toggle">
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" id="smsNotifications">
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                    <span class="toggle-label">Kapalı</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Support Section -->
+                    <div class="profile-section" id="support">
+                        <div class="section-header">
+                            <h2>Destek</h2>
+                            <p>Yardım ve destek seçenekleri</p>
+                        </div>
+                        <div class="support-options">
+                            <div class="support-card" data-aos="fade-up" data-aos-delay="100">
+                                <div class="support-icon">
+                                    <i class='bx bx-chat'></i>
+                                </div>
+                                <h4>Canlı Destek</h4>
+                                <p>7/24 canlı destek ekibimizle anında iletişim kurun</p>
+                                <button class="btn support-btn">
+                                    <i class='bx bx-message'></i>
+                                    Sohbet Başlat
+                                </button>
+                            </div>
+                            <div class="support-card" data-aos="fade-up" data-aos-delay="200">
+                                <div class="support-icon">
+                                    <i class='bx bx-phone'></i>
+                                </div>
+                                <h4>Telefon Desteği</h4>
+                                <p>Telefon ile uzman ekibimizden destek alın</p>
+                                <button class="btn support-btn">
+                                    <i class='bx bx-phone'></i>
+                                    Ara: 0850 532 0000
+                                </button>
+                            </div>
+                            <div class="support-card" data-aos="fade-up" data-aos-delay="300">
+                                <div class="support-icon">
+                                    <i class='bx bx-question-mark'></i>
+                                </div>
+                                <h4>Sık Sorulan Sorular</h4>
+                                <p>En çok sorulan sorular ve cevapları</p>
+                                <button class="btn support-btn">
+                                    <i class='bx bx-help-circle'></i>
+                                    SSS'ye Git
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Package Details Modal -->
+    <div class="modal fade" id="packageDetailsModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Paket Detayları</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="package-detail-content">
+                        <div class="detail-header">
+                            <div class="detail-country">
+                                <span class="country-flag-large" id="modalCountryFlag">🇹🇷</span>
+                                <div class="country-info">
+                                    <h4 id="modalCountryName">Türkiye</h4>
+                                    <span id="modalPackageType">Aylık Premium Paket</span>
+                                </div>
+                            </div>
+                            <div class="detail-status">
+                                <span class="status-badge active" id="modalStatus">Aktif</span>
+                            </div>
+                        </div>
+                        <div class="detail-stats">
+                            <div class="stat-item">
+                                <i class='bx bx-data'></i>
+                                <div class="stat-info">
+                                    <span class="stat-label">Veri Kullanımı</span>
+                                    <span class="stat-value" id="modalDataUsage">25 GB / 50 GB</span>
+                                </div>
+                            </div>
+                            <div class="stat-item">
+                                <i class='bx bx-time'></i>
+                                <div class="stat-info">
+                                    <span class="stat-label">Kalan Süre</span>
+                                    <span class="stat-value" id="modalTimeLeft">15 gün</span>
+                                </div>
+                            </div>
+                            <div class="stat-item">
+                                <i class='bx bx-calendar'></i>
+                                <div class="stat-info">
+                                    <span class="stat-label">Geçerlilik</span>
+                                    <span class="stat-value" id="modalValidity">15 Şub - 15 Mar</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="detail-chart">
+                            <h5>Veri Kullanım Grafiği</h5>
+                            <div class="usage-chart">
+                                <div class="chart-bar">
+                                    <div class="chart-fill" style="width: 50%"></div>
+                                </div>
+                                <div class="chart-labels">
+                                    <span>Kullanılan: 25 GB</span>
+                                    <span>Kalan: 25 GB</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="detail-actions">
+                            <button class="btn modal-btn-primary">
+                                <i class='bx bx-refresh'></i>
+                                Paketi Yenile
+                            </button>
+                            <button class="btn modal-btn-secondary">
+                                <i class='bx bx-download'></i>
+                                QR Kod İndir
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Change Password Modal -->
+    <div class="modal fade" id="changePasswordModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Şifre Değiştir</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="changePasswordForm">
+                        <div class="profile-form-group">
+                            <label class="profile-form-label">Mevcut Şifre</label>
+                            <input type="password" class="profile-form-control" name="currentPassword" required>
+                            <i class='bx bx-lock profile-input-icon'></i>
+                        </div>
+                        <div class="profile-form-group">
+                            <label class="profile-form-label">Yeni Şifre</label>
+                            <input type="password" class="profile-form-control" name="newPassword" required>
+                            <i class='bx bx-lock profile-input-icon'></i>
+                        </div>
+                        <div class="profile-form-group">
+                            <label class="profile-form-label">Yeni Şifre Tekrar</label>
+                            <input type="password" class="profile-form-control" name="confirmPassword" required>
+                            <i class='bx bx-lock profile-input-icon'></i>
+                        </div>
+                        <div class="modal-actions">
+                            <button type="button" class="btn modal-btn-secondary" data-bs-dismiss="modal">İptal</button>
+                            <button type="submit" class="btn modal-btn-primary">Şifreyi Değiştir</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
