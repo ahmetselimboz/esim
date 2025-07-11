@@ -192,6 +192,29 @@
                             Hesabım
                         </a> -->
 
+                        <!-- Dil Seçeneği -->
+                        <div class="dropdown language-dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button">
+                                <i class='bx bx-globe'></i>
+                                <span class="language-text">TR</span>
+                                <i class='bx bx-chevron-down'></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end" style="top: 30px;">
+                                <a class="dropdown-item language-item active" href="#" data-lang="tr">
+                                    <img src="https://flagcdn.com/w20/tr.png" alt="Türkçe" class="flag-icon">
+                                    <span>Türkçe</span>
+                                </a>
+                                <a class="dropdown-item language-item" href="#" data-lang="en">
+                                    <img src="https://flagcdn.com/w20/us.png" alt="English" class="flag-icon">
+                                    <span>English</span>
+                                </a>
+                                <a class="dropdown-item language-item" href="#" data-lang="ar">
+                                    <img src="https://flagcdn.com/w20/sa.png" alt="العربية" class="flag-icon">
+                                    <span>العربية</span>
+                                </a>
+                            </div>
+                        </div>
+
                         <!-- Oturum Açık Değilse -->
                         <a class="cta-button" href="#">
                             <i class='bx bx-user'></i>
@@ -231,19 +254,19 @@
                 fiyatlı, kolay ve güvenli.</p>
 
             <div class="feature-icons fade-in-up delay-3">
-                <div class="feature-item">
+                <div class="hero-feature-item">
                     <i class='bx bx-rocket icon-float'></i>
                     <span>Anında Aktivasyon</span>
                 </div>
-                <div class="feature-item">
+                <div class="hero-feature-item">
                     <i class='bx bx-check-shield icon-float'></i>
                     <span>Güvenli Bağlantı</span>
                 </div>
-                <div class="feature-item">
+                <div class="hero-feature-item">
                     <i class='bx bx-money icon-float'></i>
                     <span>Uygun Fiyat</span>
                 </div>
-                <div class="feature-item">
+                <div class="hero-feature-item">
                     <i class='bx bx-support icon-float'></i>
                     <span>7/24 Destek</span>
                 </div>
@@ -258,7 +281,7 @@
 
     <section id="popular-countries" class="py-5 bg-white">
         <div class="container text-center">
-            <h2 class="section-title fade-in-title">Popüler Ülkeler</h2>
+            <h2 class="features-section-title fade-in-title">Popüler Ülkeler</h2>
             <div class="title-underline"></div>
             <p class="text-muted my-4">En çok tercih edilen ülkelerden bazıları</p>
 
@@ -610,63 +633,66 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center mb-5">
-                    <h2 class="section-title fade-in-title">Neden Bizi Tercih Etmelisiniz?</h2>
+                    <h2 class="features-section-title fade-in-title">Neden Bizi Tercih Etmelisiniz?</h2>
                     <div class="title-underline"></div>
                 </div>
             </div>
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6">
-                    <div class="feature-card text-center" data-aos="fade-up" data-aos-delay="100">
-                        <div class="feature-card-inner">
-                            <div class="feature-icon-wrapper mb-4">
-                                <div class="feature-icon-bg"></div>
-                                <i class='bx bx-world feature-icon'></i>
-                                <div class="feature-icon-overlay"></div>
+                    <div class="home-feature-card text-center" data-aos="fade-up" data-aos-delay="100">
+                        <div class="home-feature-card-inner">
+                            <div class="home-feature-icon-wrapper mb-4">
+                                <div class="home-feature-icon-bg"></div>
+                                <i class='bx bx-world home-feature-icon'></i>
+                                <div class="home-feature-icon-overlay"></div>
                             </div>
-                            <h5 class="feature-title mb-3">Global Kapsama</h5>
-                            <p class="feature-description">200'den fazla ülkede anında bağlantı. Dünyanın her yerinde
+                            <h5 class="home-feature-title mb-3">Global Kapsama</h5>
+                            <p class="home-feature-description">200'den fazla ülkede anında bağlantı. Dünyanın her
+                                yerinde
                                 kesintisiz internet deneyimi.</p>
-                            <div class="feature-stats">
-                                <span class="stat-number">200+</span>
-                                <span class="stat-label">Ülke</span>
+                            <div class="home-feature-stats">
+                                <span class="home-stat-number">200+</span>
+                                <span class="home-stat-label">Ülke</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-md-6">
-                    <div class="feature-card text-center" data-aos="fade-up" data-aos-delay="200">
-                        <div class="feature-card-inner">
-                            <div class="feature-icon-wrapper mb-4">
-                                <div class="feature-icon-bg"></div>
-                                <i class='bx bx-rocket feature-icon'></i>
-                                <div class="feature-icon-overlay"></div>
+                    <div class="home-feature-card text-center" data-aos="fade-up" data-aos-delay="200">
+                        <div class="home-feature-card-inner">
+                            <div class="home-feature-icon-wrapper mb-4">
+                                <div class="home-feature-icon-bg"></div>
+                                <i class='bx bx-rocket home-feature-icon'></i>
+                                <div class="home-feature-icon-overlay"></div>
                             </div>
-                            <h5 class="feature-title mb-3">Anında Aktivasyon</h5>
-                            <p class="feature-description">eSIM'inizi dakikalar içinde kullanmaya başlayın. Fiziksel SIM
+                            <h5 class="home-feature-title mb-3">Anında Aktivasyon</h5>
+                            <p class="home-feature-description">eSIM'inizi dakikalar içinde kullanmaya başlayın.
+                                Fiziksel SIM
                                 kart beklemeye gerek yok.</p>
-                            <div class="feature-stats">
-                                <span class="stat-number">5</span>
-                                <span class="stat-label">Dakika</span>
+                            <div class="home-feature-stats">
+                                <span class="home-stat-number">5</span>
+                                <span class="home-stat-label">Dakika</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-md-6">
-                    <div class="feature-card text-center" data-aos="fade-up" data-aos-delay="300">
-                        <div class="feature-card-inner">
-                            <div class="feature-icon-wrapper mb-4">
-                                <div class="feature-icon-bg"></div>
-                                <i class='bx bx-money feature-icon'></i>
-                                <div class="feature-icon-overlay"></div>
+                    <div class="home-feature-card text-center" data-aos="fade-up" data-aos-delay="300">
+                        <div class="home-feature-card-inner">
+                            <div class="home-feature-icon-wrapper mb-4">
+                                <div class="home-feature-icon-bg"></div>
+                                <i class='bx bx-money home-feature-icon'></i>
+                                <div class="home-feature-icon-overlay"></div>
                             </div>
-                            <h5 class="feature-title mb-3">Uygun Fiyatlar</h5>
-                            <p class="feature-description">Seyahat sırasında yüksek dolaşım ücretlerine son! %90'a varan
+                            <h5 class="home-feature-title mb-3">Uygun Fiyatlar</h5>
+                            <p class="home-feature-description">Seyahat sırasında yüksek dolaşım ücretlerine son! %90'a
+                                varan
                                 tasarruf imkanı.</p>
-                            <div class="feature-stats">
-                                <span class="stat-number">90%</span>
-                                <span class="stat-label">Tasarruf</span>
+                            <div class="home-feature-stats">
+                                <span class="home-stat-number">90%</span>
+                                <span class="home-stat-label">Tasarruf</span>
                             </div>
                         </div>
                     </div>
@@ -678,7 +704,7 @@
     <section class="how-it-works py-5 bg-white">
         <div class="container">
             <div class="row text-center mb-5">
-                <h2 class="section-title fade-in-title">Nasıl Çalışır?</h2>
+                <h2 class="features-section-title fade-in-title">Nasıl Çalışır?</h2>
                 <div class="title-underline"></div>
             </div>
             <div class="row g-4 text-center">
@@ -719,7 +745,7 @@
     <section class="testimonials-section py-5 bg-light">
         <div class="container">
             <div class="row text-center mb-5">
-                <h2 class="section-title fade-in-title">Müşteriler Ne Diyor?</h2>
+                <h2 class="features-section-title fade-in-title">Müşteriler Ne Diyor?</h2>
                 <div class="title-underline"></div>
             </div>
             <div class="row g-4">

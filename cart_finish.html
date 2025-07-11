@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sipariş Tamamlandı - eSIM Türkiye</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- BoxIcons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/logo.png">
+</head>
+
+<body>
+    <div class="navbar-area">
+        <!-- Top Bar -->
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-bar-content">
+                    <div class="social-links">
+                        <a href="#" data-bs-toggle="tooltip" title="Facebook">
+                            <i class='bx bxl-facebook'></i>
+                        </a>
+                        <a href="#" data-bs-toggle="tooltip" title="Twitter">
+                            <i class='bx bxl-twitter'></i>
+                        </a>
+                        <a href="#" data-bs-toggle="tooltip" title="Instagram">
+                            <i class='bx bxl-instagram'></i>
+                        </a>
+                        <a href="#" data-bs-toggle="tooltip" title="YouTube">
+                            <i class='bx bxl-youtube'></i>
+                        </a>
+                        <a href="#" data-bs-toggle="tooltip" title="LinkedIn">
+                            <i class='bx bxl-linkedin'></i>
+                        </a>
+                    </div>
+                    <div class="contact-info">
+                        <a href="tel:+908505320000" class="contact-item">
+                            <i class='bx bx-phone'></i>
+                            <span>0 850 532 0000</span>
+                        </a>
+                        <a href="mailto:destek@esim.com.tr" class="contact-item">
+                            <i class='bx bx-envelope'></i>
+                            <span>destek@esim.com.tr</span>
+                        </a>
+                        <a href="#" class="contact-item d-none d-md-block">
+                            <i class='bx bx-support'></i>
+                            <span>7/24 Destek</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Navbar -->
+        <nav class="navbar navbar-expand-lg main-navbar" >
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <div class="logo">e</div>
+                    <span>eSIM Türkiye</span>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <i class='bx bx-menu navbar-toggler-icon'></i>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <div class="navbar-nav ms-auto">
+                        <div class="dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button">
+                                <i class='bx bx-sim'></i>
+                                eSIM Paketleri
+                                <i class='bx bx-chevron-down'></i>
+                            </a>
+                            <div class="mega-menu">
+                                <div class="mega-menu-content">
+                                    <div class="mega-menu-section">
+                                        <h6>Yurtiçi Paketler</h6>
+                                        <ul>
+                                            <li><a href="#"><i class='bx bx-data'></i>Günlük Paketler</a></li>
+                                            <li><a href="#"><i class='bx bx-calendar'></i>Haftalık Paketler</a></li>
+                                            <li><a href="#"><i class='bx bx-calendar-alt'></i>Aylık Paketler</a></li>
+                                            <li><a href="#"><i class='bx bx-infinite'></i>Limitsiz Paketler</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="mega-menu-section">
+                                        <h6>Uluslararası Paketler</h6>
+                                        <ul>
+                                            <li><a href="#"><i class='bx bx-world'></i>Avrupa Paketleri</a></li>
+                                            <li><a href="#"><i class='bx bx-globe'></i>Amerika Paketleri</a></li>
+                                            <li><a href="#"><i class='bx bx-map'></i>Asya Paketleri</a></li>
+                                            <li><a href="#"><i class='bx bx-planet'></i>Dünya Geneli</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button">
+                                <i class='bx bx-help-circle'></i>
+                                Nasıl Çalışır?
+                                <i class='bx bx-chevron-down'></i>
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">
+                                    <i class='bx bx-info-circle'></i>
+                                    eSIM Nedir?
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class='bx bx-download'></i>
+                                    Nasıl Yüklenir?
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class='bx bx-cog'></i>
+                                    Kurulum Rehberi
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class='bx bx-mobile'></i>
+                                    Uyumlu Cihazlar
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button">
+                                <i class='bx bx-support'></i>
+                                Destek
+                                <i class='bx bx-chevron-down'></i>
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">
+                                    <i class='bx bx-question-mark'></i>
+                                    Sık Sorulan Sorular
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class='bx bx-chat'></i>
+                                    Canlı Destek
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class='bx bx-book'></i>
+                                    Kullanım Kılavuzu
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class='bx bx-phone-call'></i>
+                                    İletişim
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button">
+                                <i class='bx bx-building'></i>
+                                Kurumsal
+                                <i class='bx bx-chevron-down'></i>
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">
+                                    <i class='bx bx-info-circle'></i>
+                                    Hakkımızda
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class='bx bx-briefcase'></i>
+                                    Kurumsal Çözümler
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class='bx bx-notepad'></i>
+                                    Partnerlik
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class='bx bx-news'></i>
+                                    Haberler
+                                </a>
+                            </div>
+                        </div>
+   <!-- Dil Seçeneği -->
+   <div class="dropdown language-dropdown">
+    <a class="nav-link dropdown-toggle" href="#" role="button">
+        <i class='bx bx-globe'></i>
+        <span class="language-text">TR</span>
+        <i class='bx bx-chevron-down'></i>
+    </a>
+    <div class="dropdown-menu dropdown-menu-end" style="top: 30px;">
+        <a class="dropdown-item language-item active" href="#" data-lang="tr">
+            <img src="https://flagcdn.com/w20/tr.png" alt="Türkçe" class="flag-icon">
+            <span>Türkçe</span>
+        </a>
+        <a class="dropdown-item language-item" href="#" data-lang="en">
+            <img src="https://flagcdn.com/w20/us.png" alt="English" class="flag-icon">
+            <span>English</span>
+        </a>
+        <a class="dropdown-item language-item" href="#" data-lang="ar">
+            <img src="https://flagcdn.com/w20/sa.png" alt="العربية" class="flag-icon">
+            <span>العربية</span>
+        </a>
+    </div>
+</div>
+                        <a class="cta-button" href="#">
+                            <i class='bx bx-user'></i>
+                            Üye Ol/Giriş Yap
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Success Hero Section -->
+    <section class="cart-finish-hero margin-top-100" >
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <div class="cart-finish-success-icon" data-aos="zoom-in">
+                        <div class="success-checkmark">
+                            <i class='bx bx-check'></i>
+                        </div>
+                        <div class="success-particles">
+                            <div class="particle"></div>
+                            <div class="particle"></div>
+                            <div class="particle"></div>
+                            <div class="particle"></div>
+                            <div class="particle"></div>
+                            <div class="particle"></div>
+                        </div>
+                    </div>
+                    <h1 class="cart-finish-title" data-aos="fade-up" data-aos-delay="200">
+                        Siparişiniz Başarıyla Tamamlandı!
+                    </h1>
+                    <p class="cart-finish-subtitle" data-aos="fade-up" data-aos-delay="300">
+                        eSIM kodlarınız e-posta adresinize gönderilmiştir. Aşağıdaki QR kodları kullanarak hemen
+                        kuruluma başlayabilirsiniz.
+                    </p>
+                    <div class="cart-finish-order-info" data-aos="fade-up" data-aos-delay="400">
+                        <div class="order-number">
+                            <i class='bx bx-receipt'></i>
+                            <span>Sipariş No: <strong>#ESM-2025-001</strong></span>
+                        </div>
+                        <div class="order-date">
+                            <i class='bx bx-calendar'></i>
+                            <span>Tarih: <strong>15 Ocak 2025, 14:30</strong></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Details Section -->
+    <section class="cart-finish-details">
+        <div class="container">
+            <div class="row">
+                <!-- Order Summary -->
+                <div class="col-lg-4 mb-4">
+                    <div class="cart-finish-summary-card" data-aos="fade-right">
+                        <div class="card-header">
+                            <h4><i class='bx bx-list-ul'></i> Sipariş Özeti</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="summary-item">
+                                <div class="item-info">
+                                    <div class="item-flag">🇹🇷</div>
+                                    <div class="item-details">
+                                        <h6>Türkiye Premium 30GB</h6>
+                                        <span>Miktar: 1</span>
+                                    </div>
+                                </div>
+                                <div class="item-price">₺199</div>
+                            </div>
+                            <div class="summary-item">
+                                <div class="item-info">
+                                    <div class="item-flag">🇺🇸</div>
+                                    <div class="item-details">
+                                        <h6>Amerika Mega 50GB</h6>
+                                        <span>Miktar: 2</span>
+                                    </div>
+                                </div>
+                                <div class="item-price">₺798</div>
+                            </div>
+                            <div class="summary-item">
+                                <div class="item-info">
+                                    <div class="item-flag">🇩🇪</div>
+                                    <div class="item-details">
+                                        <h6>Almanya Express 20GB</h6>
+                                        <span>Miktar: 1</span>
+                                    </div>
+                                </div>
+                                <div class="item-price">₺230</div>
+                            </div>
+                            <hr>
+                            <div class="summary-totals">
+                                <div class="total-row">
+                                    <span>Ara Toplam:</span>
+                                    <span>₺1.227</span>
+                                </div>
+                                <div class="total-row discount">
+                                    <span>İndirim:</span>
+                                    <span>-₺200</span>
+                                </div>
+                                <div class="total-row">
+                                    <span>KDV (18%):</span>
+                                    <span>₺185</span>
+                                </div>
+                                <div class="total-row final">
+                                    <span>Toplam:</span>
+                                    <span>₺1.212</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Payment Info -->
+                    <div class="cart-finish-payment-card" data-aos="fade-right" data-aos-delay="100">
+                        <div class="card-header">
+                            <h4><i class='bx bx-credit-card'></i> Ödeme Bilgileri</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="payment-method">
+                                <div class="method-icon">
+                                    <i class='bx bx-credit-card'></i>
+                                </div>
+                                <div class="method-details">
+                                    <h6>Kredi Kartı</h6>
+                                    <span>**** **** **** 1234</span>
+                                </div>
+                                <div class="method-status">
+                                    <span class="status-badge success">Başarılı</span>
+                                </div>
+                            </div>
+                            <div class="payment-details">
+                                <div class="detail-item">
+                                    <span>İşlem Tarihi:</span>
+                                    <span>15.01.2025 14:30</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span>İşlem No:</span>
+                                    <span>TXN-2025-001</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span>Banka:</span>
+                                    <span>Garanti BBVA</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- QR Codes Section -->
+                <div class="col-lg-8">
+                    <div class="cart-finish-qr-section" data-aos="fade-left">
+                        <div class="section-header">
+                            <h3><i class='bx bx-qr-scan'></i> eSIM QR Kodları</h3>
+                            <p>Aşağıdaki QR kodları telefonunuzun kamerası ile okutarak eSIM'lerinizi aktif
+                                edebilirsiniz.</p>
+                        </div>
+
+                        <div class="qr-codes-grid">
+                            <!-- QR Code 1 -->
+                            <div class="qr-code-card" data-aos="fade-up" data-aos-delay="200">
+                                <div class="qr-header">
+                                    <div class="country-info">
+                                        <div class="country-flag">🇹🇷</div>
+                                        <div class="country-details">
+                                            <h5>Türkiye Premium 30GB</h5>
+                                            <span>30 gün geçerli • 5G destekli</span>
+                                        </div>
+                                    </div>
+                                    <div class="qr-status">
+                                        <span class="status-badge ready">Hazır</span>
+                                    </div>
+                                </div>
+                                <div class="qr-code-container">
+                                    <div class="qr-code-placeholder">
+                                        <div class="qr-pattern">
+                                            <div class="qr-corner tl"></div>
+                                            <div class="qr-corner tr"></div>
+                                            <div class="qr-corner bl"></div>
+                                            <div class="qr-corner br"></div>
+                                            <div class="qr-dots">
+                                                <div class="dot"></div>
+                                                <div class="dot"></div>
+                                                <div class="dot"></div>
+                                                <div class="dot"></div>
+                                                <div class="dot"></div>
+                                                <div class="dot"></div>
+                                                <div class="dot"></div>
+                                                <div class="dot"></div>
+                                                <div class="dot"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="qr-actions">
+                                        <button class="btn-download" data-qr="turkey">
+                                            <i class='bx bx-download'></i>
+                                            İndir
+                                        </button>
+                                        <button class="btn-share" data-qr="turkey">
+                                            <i class='bx bx-share'></i>
+                                            Paylaş
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="qr-info">
+                                    <div class="info-item">
+                                        <i class='bx bx-time'></i>
+                                        <span>Aktivasyon süresi: 30 saniye</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <i class='bx bx-signal-5'></i>
+                                        <span>Kapsama: %98 nüfus</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- QR Code 2 -->
+                            <div class="qr-code-card" data-aos="fade-up" data-aos-delay="300">
+                                <div class="qr-header">
+                                    <div class="country-info">
+                                        <div class="country-flag">🇺🇸</div>
+                                        <div class="country-details">
+                                            <h5>Amerika Mega 50GB</h5>
+                                            <span>30 gün geçerli • Hotspot özelliği</span>
+                                        </div>
+                                    </div>
+                                    <div class="qr-status">
+                                        <span class="status-badge ready">Hazır</span>
+                                    </div>
+                                </div>
+                                <div class="qr-code-container">
+                                    <div class="qr-code-placeholder">
+                                        <div class="qr-pattern">
+                                            <div class="qr-corner tl"></div>
+                                            <div class="qr-corner tr"></div>
+                                            <div class="qr-corner bl"></div>
+                                            <div class="qr-corner br"></div>
+                                            <div class="qr-dots">
+                                                <div class="dot"></div>
+                                                <div class="dot"></div>
+                                                <div class="dot"></div>
+                                                <div class="dot"></div>
+                                                <div class="dot"></div>
+                                                <div class="dot"></div>
+                                                <div class="dot"></div>
+                                                <div class="dot"></div>
+                                                <div class="dot"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="qr-actions">
+                                        <button class="btn-download" data-qr="usa">
+                                            <i class='bx bx-download'></i>
+                                            İndir
+                                        </button>
+                                        <button class="btn-share" data-qr="usa">
+                                            <i class='bx bx-share'></i>
+                                            Paylaş
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="qr-info">
+                                    <div class="info-item">
+                                        <i class='bx bx-time'></i>
+                                        <span>Aktivasyon süresi: 45 saniye</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <i class='bx bx-wifi'></i>
+                                        <span>Hotspot: 10GB dahil</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- QR Code 3 -->
+                            <div class="qr-code-card" data-aos="fade-up" data-aos-delay="400">
+                                <div class="qr-header">
+                                    <div class="country-info">
+                                        <div class="country-flag">🇩🇪</div>
+                                        <div class="country-details">
+                                            <h5>Almanya Express 20GB</h5>
+                                            <span>15 gün geçerli • EU Roaming</span>
+                                        </div>
+                                    </div>
+                                    <div class="qr-status">
+                                        <span class="status-badge ready">Hazır</span>
+                                    </div>
+                                </div>
+                                <div class="qr-code-container">
+                                    <div class="qr-code-placeholder">
+                                        <div class="qr-pattern">
+                                            <div class="qr-corner tl"></div>
+                                            <div class="qr-corner tr"></div>
+                                            <div class="qr-corner bl"></div>
+                                            <div class="qr-corner br"></div>
+                                            <div class="qr-dots">
+                                                <div class="dot"></div>
+                                                <div class="dot"></div>
+                                                <div class="dot"></div>
+                                                <div class="dot"></div>
+                                                <div class="dot"></div>
+                                                <div class="dot"></div>
+                                                <div class="dot"></div>
+                                                <div class="dot"></div>
+                                                <div class="dot"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="qr-actions">
+                                        <button class="btn-download" data-qr="germany">
+                                            <i class='bx bx-download'></i>
+                                            İndir
+                                        </button>
+                                        <button class="btn-share" data-qr="germany">
+                                            <i class='bx bx-share'></i>
+                                            Paylaş
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="qr-info">
+                                    <div class="info-item">
+                                        <i class='bx bx-time'></i>
+                                        <span>Aktivasyon süresi: 30 saniye</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <i class='bx bx-globe'></i>
+                                        <span>EU Roaming: 28 ülke</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Installation Guide Section -->
+    <section class="cart-finish-guide">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <h3><i class='bx bx-mobile-alt'></i> Kurulum Rehberi</h3>
+                <p>eSIM'inizi 3 kolay adımda kurun ve hemen kullanmaya başlayın</p>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="installation-steps">
+                        <!-- Step 1 -->
+                        <div class="step-card" data-aos="fade-right" data-aos-delay="100">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <div class="step-icon">
+                                    <i class='bx bx-qr-scan'></i>
+                                </div>
+                                <div class="step-details">
+                                    <h4>QR Kodu Okutun</h4>
+                                    <p>Telefonunuzun kamerası ile yukarıdaki QR kodunu okutun. Ayarlar > Hücresel > eSIM
+                                        Ekle seçeneğini kullanabilirsiniz.</p>
+                                    <div class="step-tips">
+                                        <div class="tip">
+                                            <i class='bx bx-info-circle'></i>
+                                            <span>iOS: Ayarlar > Hücresel > eSIM Ekle</span>
+                                        </div>
+                                        <div class="tip">
+                                            <i class='bx bx-info-circle'></i>
+                                            <span>Android: Ayarlar > Bağlantılar > SIM Kartı Yöneticisi</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 2 -->
+                        <div class="step-card" data-aos="fade-left" data-aos-delay="200">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <div class="step-icon">
+                                    <i class='bx bx-cog'></i>
+                                </div>
+                                <div class="step-details">
+                                    <h4>eSIM'i Aktif Edin</h4>
+                                    <p>QR kod okutulduktan sonra eSIM otomatik olarak indirilecektir. "Hücresel Plan
+                                        Ekle" butonuna tıklayarak aktivasyonu tamamlayın.</p>
+                                    <div class="step-tips">
+                                        <div class="tip">
+                                            <i class='bx bx-time'></i>
+                                            <span>Aktivasyon süresi: 30-60 saniye</span>
+                                        </div>
+                                        <div class="tip">
+                                            <i class='bx bx-wifi'></i>
+                                            <span>Wi-Fi bağlantısı gereklidir</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 3 -->
+                        <div class="step-card" data-aos="fade-right" data-aos-delay="300">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <div class="step-icon">
+                                    <i class='bx bx-check-circle'></i>
+                                </div>
+                                <div class="step-details">
+                                    <h4>Kullanmaya Başlayın</h4>
+                                    <p>eSIM başarıyla kurulduktan sonra veri planınızı seçin ve internet kullanımına
+                                        başlayın. Şebeke ayarları otomatik olarak yapılacaktır.</p>
+                                    <div class="step-tips">
+                                        <div class="tip">
+                                            <i class='bx bx-signal-5'></i>
+                                            <span>Şebeke bağlantısı otomatik</span>
+                                        </div>
+                                        <div class="tip">
+                                            <i class='bx bx-support'></i>
+                                            <span>Sorun yaşarsanız 7/24 destek</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Email Confirmation Section -->
+    <section class="cart-finish-email">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="email-confirmation-card" data-aos="fade-up">
+                        <div class="email-icon">
+                            <i class='bx bx-envelope-open'></i>
+                        </div>
+                        <div class="email-content">
+                            <h4>E-posta Gönderildi</h4>
+                            <p>Sipariş detaylarınız ve QR kodlarınız <strong>ornek@email.com</strong> adresine
+                                gönderilmiştir.</p>
+                            <div class="email-actions">
+                                <button class="btn-resend" id="resendEmail">
+                                    <i class='bx bx-refresh'></i>
+                                    Tekrar Gönder
+                                </button>
+                                <button class="btn-print" id="printOrder">
+                                    <i class='bx bx-printer'></i>
+                                    Yazdır
+                                </button>
+                            </div>
+                        </div>
+                        <div class="email-status">
+                            <div class="status-indicator success">
+                                <i class='bx bx-check'></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Action Buttons Section -->
+    <section class="cart-finish-actions">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="action-buttons" data-aos="fade-up">
+                        <a href="index.html" class="btn-primary">
+                            <i class='bx bx-home'></i>
+                            Ana Sayfaya Dön
+                        </a>
+                        <a href="profile.html" class="btn-secondary">
+                            <i class='bx bx-user'></i>
+                            Siparişlerimi Görüntüle
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Section -->
+    <section class="cart-finish-support">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="support-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="support-icon">
+                            <i class='bx bx-chat'></i>
+                        </div>
+                        <div class="support-content">
+                            <h5>Canlı Destek</h5>
+                            <p>Kurulum sırasında sorun yaşarsanız 7/24 canlı destek ekibimiz yardımcı olacaktır.</p>
+                            <button class="support-btn">
+                                <i class='bx bx-message-dots'></i>
+                                Sohbet Başlat
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="support-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="support-icon">
+                            <i class='bx bx-phone'></i>
+                        </div>
+                        <div class="support-content">
+                            <h5>Telefon Desteği</h5>
+                            <p>Teknik destek için bizi arayabilir, uzman ekibimizden anında yardım alabilirsiniz.</p>
+                            <button class="support-btn">
+                                <i class='bx bx-phone-call'></i>
+                                0 850 532 0000
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="support-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="support-icon">
+                            <i class='bx bx-video'></i>
+                        </div>
+                        <div class="support-content">
+                            <h5>Video Rehber</h5>
+                            <p>Adım adım kurulum videoları ile eSIM kurulumunu kolayca tamamlayabilirsiniz.</p>
+                            <button class="support-btn">
+                                <i class='bx bx-play-circle'></i>
+                                Videoları İzle
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white pt-5 pb-4 position-relative z-5">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <h5 class="footer-title">eSIM Türkiye</h5>
+                    <p class="small">Seyahatinizde hızlı, uygun fiyatlı ve sorunsuz internetin adresi. Global kapsama
+                        ile her yerde bağlı kalın.</p>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <h6 class="footer-heading">Hızlı Linkler</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="#populer" class="footer-link">Popüler Ülkeler</a></li>
+                        <li><a href="#neden" class="footer-link">Neden Biz?</a></li>
+                        <li><a href="#nasıl" class="footer-link">Nasıl Çalışır?</a></li>
+                        <li><a href="#yorumlar" class="footer-link">Yorumlar</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <h6 class="footer-heading">İletişim</h6>
+                    <ul class="list-unstyled small">
+                        <li><i class="bx bx-envelope me-2"></i> destek@esim.com.tr</li>
+                        <li><i class="bx bx-map me-2"></i> İstanbul, Türkiye</li>
+                    </ul>
+                    <div class="social-icons mt-3">
+                        <a href="#" class="social-icon"><i class="bx bxl-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="bx bxl-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="bx bxl-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="bx bxl-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-12">
+                    <p class="small mb-0">&copy; 2025 eSIM Türkiye. Tüm hakları saklıdır.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        // Initialize cart finish page
+        $(document).ready(function () {
+            if (typeof initializeCartFinishPage === 'function') {
+                initializeCartFinishPage();
+            }
+        });
+    </script>
+</body>
+
+</html>

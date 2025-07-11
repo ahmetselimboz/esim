@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sepetim - eSIMHızlı</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- BoxIcons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/logo.png">
+</head>
+
+<body>
+    <div class="navbar-area">
+        <!-- Top Bar -->
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-bar-content">
+                    <div class="social-links">
+                        <a href="#" data-bs-toggle="tooltip" title="Facebook">
+                            <i class='bx bxl-facebook'></i>
+                        </a>
+                        <a href="#" data-bs-toggle="tooltip" title="Twitter">
+                            <i class='bx bxl-twitter'></i>
+                        </a>
+                        <a href="#" data-bs-toggle="tooltip" title="Instagram">
+                            <i class='bx bxl-instagram'></i>
+                        </a>
+                        <a href="#" data-bs-toggle="tooltip" title="YouTube">
+                            <i class='bx bxl-youtube'></i>
+                        </a>
+                        <a href="#" data-bs-toggle="tooltip" title="LinkedIn">
+                            <i class='bx bxl-linkedin'></i>
+                        </a>
+                    </div>
+                    <div class="contact-info">
+                        <a href="tel:+908505320000" class="contact-item">
+                            <i class='bx bx-phone'></i>
+                            <span>0 850 532 0000</span>
+                        </a>
+                        <a href="mailto:destek@esim.com.tr" class="contact-item">
+                            <i class='bx bx-envelope'></i>
+                            <span>destek@esim.com.tr</span>
+                        </a>
+                        <a href="#" class="contact-item d-none d-md-block">
+                            <i class='bx bx-support'></i>
+                            <span>7/24 Destek</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Navbar -->
+        <nav class="navbar navbar-expand-lg main-navbar">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <div class="logo">e</div>
+                    <span>eSIM Türkiye</span>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <i class='bx bx-menu navbar-toggler-icon'></i>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <div class="navbar-nav ms-auto">
+
+
+                        <div class="dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button">
+                                <i class='bx bx-sim'></i>
+                                eSIM Paketleri
+                                <i class='bx bx-chevron-down'></i>
+                            </a>
+                            <div class="mega-menu">
+                                <div class="mega-menu-content">
+                                    <div class="mega-menu-section">
+                                        <h6>Yurtiçi Paketler</h6>
+                                        <ul>
+                                            <li><a href="#"><i class='bx bx-data'></i>Günlük Paketler</a></li>
+                                            <li><a href="#"><i class='bx bx-calendar'></i>Haftalık Paketler</a></li>
+                                            <li><a href="#"><i class='bx bx-calendar-alt'></i>Aylık Paketler</a></li>
+                                            <li><a href="#"><i class='bx bx-infinite'></i>Limitsiz Paketler</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="mega-menu-section">
+                                        <h6>Uluslararası Paketler</h6>
+                                        <ul>
+                                            <li><a href="#"><i class='bx bx-world'></i>Avrupa Paketleri</a></li>
+                                            <li><a href="#"><i class='bx bx-globe'></i>Amerika Paketleri</a></li>
+                                            <li><a href="#"><i class='bx bx-map'></i>Asya Paketleri</a></li>
+                                            <li><a href="#"><i class='bx bx-planet'></i>Dünya Geneli</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button">
+                                <i class='bx bx-help-circle'></i>
+                                Nasıl Çalışır?
+                                <i class='bx bx-chevron-down'></i>
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">
+                                    <i class='bx bx-info-circle'></i>
+                                    eSIM Nedir?
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class='bx bx-download'></i>
+                                    Nasıl Yüklenir?
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class='bx bx-cog'></i>
+                                    Kurulum Rehberi
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class='bx bx-mobile'></i>
+                                    Uyumlu Cihazlar
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button">
+                                <i class='bx bx-support'></i>
+                                Destek
+                                <i class='bx bx-chevron-down'></i>
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">
+                                    <i class='bx bx-question-mark'></i>
+                                    Sık Sorulan Sorular
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class='bx bx-chat'></i>
+                                    Canlı Destek
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class='bx bx-book'></i>
+                                    Kullanım Kılavuzu
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class='bx bx-phone-call'></i>
+                                    İletişim
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button">
+                                <i class='bx bx-building'></i>
+                                Kurumsal
+                                <i class='bx bx-chevron-down'></i>
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">
+                                    <i class='bx bx-info-circle'></i>
+                                    Hakkımızda
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class='bx bx-briefcase'></i>
+                                    Kurumsal Çözümler
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class='bx bx-notepad'></i>
+                                    Partnerlik
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class='bx bx-news'></i>
+                                    Haberler
+                                </a>
+                            </div>
+                        </div>
+                           <!-- Dil Seçeneği -->
+                           <div class="dropdown language-dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button">
+                                <i class='bx bx-globe'></i>
+                                <span class="language-text">TR</span>
+                                <i class='bx bx-chevron-down'></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end" style="top: 30px;">
+                                <a class="dropdown-item language-item active" href="#" data-lang="tr">
+                                    <img src="https://flagcdn.com/w20/tr.png" alt="Türkçe" class="flag-icon">
+                                    <span>Türkçe</span>
+                                </a>
+                                <a class="dropdown-item language-item" href="#" data-lang="en">
+                                    <img src="https://flagcdn.com/w20/us.png" alt="English" class="flag-icon">
+                                    <span>English</span>
+                                </a>
+                                <a class="dropdown-item language-item" href="#" data-lang="ar">
+                                    <img src="https://flagcdn.com/w20/sa.png" alt="العربية" class="flag-icon">
+                                    <span>العربية</span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- <a class="nav-link" href="#">
+                            <i class='bx bx-user-circle'></i>
+                            Hakkımızda
+                        </a> -->
+                        <!-- Oturum Açıldığında -->
+                        <!-- <a class="nav-link" href="#">
+                            <i class='bx bx-user-circle'></i>
+                            Hesabım
+                        </a> -->
+
+                        <!-- Oturum Açık Değilse -->
+                        <a class="cta-button" href="#">
+                            <i class='bx bx-user'></i>
+                            Üye Ol/Giriş Yap
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Breadcrumb -->
+    <!-- <section class="cart-breadcrumb">
+        <div class="container">
+            <nav aria-label="breadcrumb" data-aos="fade-right">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html"><i class='bx bx-home'></i> Ana Sayfa</a></li>
+                    <li class="breadcrumb-item active" aria-current="page"><i class='bx bx-shopping-bag'></i> Sepetim
+                    </li>
+                </ol>
+            </nav>
+        </div>
+    </section> -->
+
+    <!-- Cart Content -->
+    <section class="cart-section">
+        <div class="container">
+            <div class="row">
+                <!-- Cart Items -->
+                <div class="col-lg-8 mb-4">
+                    <div class="cart-header" data-aos="fade-up">
+                        <h2><i class='bx bx-shopping-bag'></i> Sepetim</h2>
+                        <span class="cart-count">3 ürün</span>
+                    </div>
+
+                    <!-- Cart Item 1 -->
+                    <div class="cart-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="cart-item-image">
+                            <div class="country-flag">🇹🇷</div>
+                        </div>
+                        <div class="cart-item-details">
+                            <h5 class="cart-item-title">Türkiye Premium 30GB</h5>
+                            <p class="cart-item-desc">30 gün geçerli • 5G destekli • Sınırsız arama</p>
+                            <div class="cart-item-features">
+                                <span class="cart-feature-badge"><i class='bx bx-zap'></i> Anında Aktivasyon</span>
+                                <span class="cart-feature-badge"><i class='bx bx-shield'></i> Güvenli</span>
+                            </div>
+                        </div>
+                        <div class="cart-item-controls">
+                            <div class="cart-quantity">
+                                <button class="quantity-btn minus" data-action="decrease">
+                                    <i class='bx bx-minus'></i>
+                                </button>
+                                <input type="number" class="quantity-input" value="1" min="1" max="10">
+                                <button class="quantity-btn plus" data-action="increase">
+                                    <i class='bx bx-plus'></i>
+                                </button>
+                            </div>
+                            <div class="cart-item-price">
+                                <span class="original-price">₺299</span>
+                                <span class="current-price">₺199</span>
+                            </div>
+                            <button class="cart-remove-btn" data-bs-toggle="tooltip" title="Sepetten Kaldır">
+                                <i class='bx bx-trash'></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Cart Item 2 -->
+                    <div class="cart-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="cart-item-image">
+                            <div class="country-flag">🇺🇸</div>
+                        </div>
+                        <div class="cart-item-details">
+                            <h5 class="cart-item-title">Amerika Mega 50GB</h5>
+                            <p class="cart-item-desc">30 gün geçerli • 5G destekli • Hotspot özelliği</p>
+                            <div class="cart-item-features">
+                                <span class="cart-feature-badge"><i class='bx bx-rocket'></i> Yüksek Hız</span>
+                                <span class="cart-feature-badge"><i class='bx bx-wifi'></i> Hotspot</span>
+                            </div>
+                        </div>
+                        <div class="cart-item-controls">
+                            <div class="cart-quantity">
+                                <button class="quantity-btn minus" data-action="decrease">
+                                    <i class='bx bx-minus'></i>
+                                </button>
+                                <input type="number" class="quantity-input" value="2" min="1" max="10">
+                                <button class="quantity-btn plus" data-action="increase">
+                                    <i class='bx bx-plus'></i>
+                                </button>
+                            </div>
+                            <div class="cart-item-price">
+                                <span class="original-price">₺450</span>
+                                <span class="current-price">₺399</span>
+                            </div>
+                            <button class="cart-remove-btn" data-bs-toggle="tooltip" title="Sepetten Kaldır">
+                                <i class='bx bx-trash'></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Cart Item 3 -->
+                    <div class="cart-item" data-aos="fade-up" data-aos-delay="300">
+                        <div class="cart-item-image">
+                            <div class="country-flag">🇩🇪</div>
+                        </div>
+                        <div class="cart-item-details">
+                            <h5 class="cart-item-title">Almanya Express 20GB</h5>
+                            <p class="cart-item-desc">15 gün geçerli • 4G/5G hızında • Roaming dahil</p>
+                            <div class="cart-item-features">
+                                <span class="cart-feature-badge"><i class='bx bx-time'></i> 15 Gün</span>
+                                <span class="cart-feature-badge"><i class='bx bx-globe'></i> EU Roaming</span>
+                            </div>
+                        </div>
+                        <div class="cart-item-controls">
+                            <div class="cart-quantity">
+                                <button class="quantity-btn minus" data-action="decrease">
+                                    <i class='bx bx-minus'></i>
+                                </button>
+                                <input type="number" class="quantity-input" value="1" min="1" max="10">
+                                <button class="quantity-btn plus" data-action="increase">
+                                    <i class='bx bx-plus'></i>
+                                </button>
+                            </div>
+                            <div class="cart-item-price">
+                                <span class="original-price">₺280</span>
+                                <span class="current-price">₺230</span>
+                            </div>
+                            <button class="cart-remove-btn" data-bs-toggle="tooltip" title="Sepetten Kaldır">
+                                <i class='bx bx-trash'></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Continue Shopping -->
+                    <div class="cart-continue-shopping" data-aos="fade-up" data-aos-delay="400">
+                        <a href="index.html" class="continue-shopping-btn">
+                            <i class='bx bx-arrow-back'></i>
+                            Alışverişe Devam Et
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Cart Summary -->
+                <div class="col-lg-4">
+                    <div class="cart-summary" data-aos="fade-up" data-aos-delay="200">
+                        <div class="cart-summary-header">
+                            <h4><i class='bx bx-calculator'></i> Sipariş Özeti</h4>
+                        </div>
+
+                        <div class="cart-summary-body">
+                            <div class="summary-row">
+                                <span>Ara Toplam:</span>
+                                <span class="cart-subtotal">₺828</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>İndirim:</span>
+                                <span class="cart-discount text-success">-₺200</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>KDV (18%):</span>
+                                <span class="cart-tax">₺113</span>
+                            </div>
+                            <hr>
+                            <div class="summary-row total-row">
+                                <span>Toplam:</span>
+                                <span class="cart-total">₺741</span>
+                            </div>
+                        </div>
+
+                        <!-- Promo Code -->
+                        <div class="cart-promo-section">
+                            <h6><i class='bx bx-gift'></i> Promosyon Kodu</h6>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Kod girin" id="promoCode">
+                                <button class="btn btn-outline-primary" type="button" id="applyPromo">
+                                    Uygula
+                                </button>
+                            </div>
+                            <div class="promo-message mt-2"></div>
+                        </div>
+
+                        <!-- Checkout Button -->
+                        <button class="cart-checkout-btn" id="proceedToCheckout">
+                            <i class='bx bx-credit-card'></i>
+                            Ödemeye Geç
+                            <span class="checkout-amount">₺741</span>
+                        </button>
+
+                        <!-- Security Info -->
+                        <div class="cart-security-info">
+                            <div class="security-item">
+                                <i class='bx bx-shield-check'></i>
+                                <span>SSL ile güvenli ödeme</span>
+                            </div>
+                            <div class="security-item">
+                                <i class='bx bx-credit-card'></i>
+                                <span>Tüm kartlar kabul edilir</span>
+                            </div>
+                            <div class="security-item">
+                                <i class='bx bx-time'></i>
+                                <span>Anında aktivasyon</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recommended Products -->
+                    <div class="cart-recommendations" data-aos="fade-up" data-aos-delay="300">
+                        <h5><i class='bx bx-star'></i> Önerilen Paketler</h5>
+
+                        <div class="recommendation-item">
+                            <div class="rec-flag">🇫🇷</div>
+                            <div class="rec-details">
+                                <h6>Fransa 15GB</h6>
+                                <p>₺180</p>
+                            </div>
+                            <button class="rec-add-btn">
+                                <i class='bx bx-plus'></i>
+                            </button>
+                        </div>
+
+                        <div class="recommendation-item">
+                            <div class="rec-flag">🇮🇹</div>
+                            <div class="rec-details">
+                                <h6>İtalya 25GB</h6>
+                                <p>₺220</p>
+                            </div>
+                            <button class="rec-add-btn">
+                                <i class='bx bx-plus'></i>
+                            </button>
+                        </div>
+
+                        <div class="recommendation-item">
+                            <div class="rec-flag">🌍</div>
+                            <div class="rec-details">
+                                <h6>Global 100GB</h6>
+                                <p>₺599</p>
+                            </div>
+                            <button class="rec-add-btn">
+                                <i class='bx bx-plus'></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Checkout Modal -->
+    <div class="modal fade" id="checkoutModal" tabindex="-1" aria-labelledby="checkoutModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="checkoutModalLabel">
+                        <i class='bx bx-credit-card'></i> Ödeme Bilgileri
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="checkoutForm">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="firstName" class="form-label">Ad</label>
+                                <input type="text" class="form-control" id="firstName" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="lastName" class="form-label">Soyad</label>
+                                <input type="text" class="form-control" id="lastName" required>
+                            </div>
+                            <div class="col-12 mb-3">
+                                <label for="email" class="form-label">E-posta</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="col-12 mb-3">
+                                <label for="phone" class="form-label">Telefon</label>
+                                <input type="tel" class="form-control" id="phone" required>
+                            </div>
+                            <div class="col-12 mb-3">
+                                <label for="cardNumber" class="form-label">Kart Numarası</label>
+                                <input type="text" class="form-control" id="cardNumber"
+                                    placeholder="1234 5678 9012 3456" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="expiryDate" class="form-label">Son Kullanım</label>
+                                <input type="text" class="form-control" id="expiryDate" placeholder="MM/YY" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="cvv" class="form-label">CVV</label>
+                                <input type="text" class="form-control" id="cvv" placeholder="123" required>
+                            </div>
+                        </div>
+
+                        <!-- Order Summary in Modal -->
+                        <div class="checkout-summary">
+                            <h6>Sipariş Özeti</h6>
+                            <div class="checkout-items">
+                                <div class="checkout-item">
+                                    <span>🇹🇷 Türkiye Premium 30GB (x1)</span>
+                                    <span>₺199</span>
+                                </div>
+                                <div class="checkout-item">
+                                    <span>🇺🇸 Amerika Mega 50GB (x2)</span>
+                                    <span>₺798</span>
+                                </div>
+                                <div class="checkout-item">
+                                    <span>🇩🇪 Almanya Express 20GB (x1)</span>
+                                    <span>₺230</span>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="checkout-total">
+                                <strong>Toplam: ₺741</strong>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">İptal</button>
+                    <button type="button" class="btn btn-primary" id="completePayment">
+                        <i class='bx bx-credit-card'></i>
+                        Ödemeyi Tamamla
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    <div class="success-icon">
+                        <i class='bx bx-check-circle'></i>
+                    </div>
+                    <h4>Siparişiniz Başarıyla Tamamlandı!</h4>
+                    <p>eSIM kodlarınız e-posta adresinize gönderilmiştir.</p>
+                    <div class="order-details">
+                        <p><strong>Sipariş No:</strong> #ESM-2025-001</p>
+                        <p><strong>Toplam:</strong> ₺741</p>
+                    </div>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
+                        Tamam
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white pt-5 pb-4 position-relative z-5">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <h5 class="footer-title">eSIMHızlı</h5>
+                    <p class="small">Seyahatinizde hızlı, uygun fiyatlı ve sorunsuz internetin adresi. Global kapsama
+                        ile her yerde bağlı kalın.</p>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <h6 class="footer-heading">Hızlı Linkler</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="#populer" class="footer-link">Popüler Ülkeler</a></li>
+                        <li><a href="#neden" class="footer-link">Neden Biz?</a></li>
+                        <li><a href="#nasıl" class="footer-link">Nasıl Çalışır?</a></li>
+                        <li><a href="#yorumlar" class="footer-link">Yorumlar</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <h6 class="footer-heading">İletişim</h6>
+                    <ul class="list-unstyled small">
+                        <li><i class="bx bx-envelope me-2"></i> destek@esimhizli.com</li>
+                        <li><i class="bx bx-map me-2"></i> İstanbul, Türkiye</li>
+                    </ul>
+                    <div class="social-icons mt-3">
+                        <a href="#" class="social-icon"><i class="bx bxl-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="bx bxl-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="bx bxl-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="bx bxl-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-12">
+                    <p class="small mb-0">&copy; 2025 eSIMHızlı. Tüm hakları saklıdır.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        // Initialize cart page
+        $(document).ready(function () {
+            if (typeof initializeCartPage === 'function') {
+                initializeCartPage();
+            }
+        });
+    </script>
+</body>
+
+</html>
