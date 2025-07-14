@@ -3287,3 +3287,1301 @@ function showLanguageNotification(languageName) {
 document.addEventListener('DOMContentLoaded', function () {
     initializeLanguageSelector();
 });
+
+/* ===================================
+   BLOG DETAIL PAGE FUNCTIONS
+   =================================== */
+
+$(document).ready(function () {
+    // Initialize blog features if on blog detail page
+    if ($('.blog-content-section').length) {
+        initializeBlogFeatures();
+    }
+});
+
+function initializeBlogFeatures() {
+    // Initialize all blog-related features
+    initializeBlogSearch();
+    initializeSocialShare();
+    initializeCommentForm();
+    initializeLinkCopy();
+    initializeBlogAnimations();
+    initializeTooltips();
+    initializeReadingProgress();
+}
+
+// Blog Search Functionality
+function initializeBlogSearch() {
+    const searchInput = $('#blogSearchInput');
+    const searchBtn = $('.search-btn');
+
+    // Search on button click
+    searchBtn.on('click', function (e) {
+        e.preventDefault();
+        performBlogSearch();
+    });
+
+    // Search on Enter key
+    searchInput.on('keypress', function (e) {
+        if (e.which === 13) {
+            e.preventDefault();
+            performBlogSearch();
+        }
+    });
+
+    // Search suggestions on input
+    let searchTimeout;
+    searchInput.on('input', function () {
+        clearTimeout(searchTimeout);
+        const query = $(this).val().trim();
+
+        if (query.length >= 2) {
+            searchTimeout = setTimeout(() => {
+                showSearchSuggestions(query);
+            }, 300);
+        } else {
+            hideSearchSuggestions();
+        }
+    });
+}
+
+function performBlogSearch() {
+    const query = $('#blogSearchInput').val().trim();
+
+    if (query.length === 0) {
+        showBlogNotification('Lütfen arama terimi girin.', 'warning');
+        return;
+    }
+
+    // Add loading animation to search button
+    const searchBtn = $('.search-btn');
+    const originalContent = searchBtn.html();
+    searchBtn.html('<i class="bx bx-loader-alt bx-spin"></i>');
+
+    // Simulate search (replace with actual search implementation)
+    setTimeout(() => {
+        searchBtn.html(originalContent);
+        showBlogNotification(`"${query}" için arama sonuçları gösteriliyor...`, 'success');
+
+        // Here you would typically redirect to search results page
+        // window.location.href = `/blog/search?q=${encodeURIComponent(query)}`;
+    }, 1000);
+}
+
+function showSearchSuggestions(query) {
+    // Sample suggestions - replace with actual data
+    const suggestions = [
+        'eSIM teknolojisi',
+        'eSIM güvenliği',
+        'eSIM kurulum',
+        'eSIM seyahat',
+        'eSIM avantajları'
+    ].filter(item => item.toLowerCase().includes(query.toLowerCase()));
+
+    if (suggestions.length > 0) {
+        let suggestionsHtml = '<div class="search-suggestions">';
+        suggestions.forEach(suggestion => {
+            suggestionsHtml += `<div class="suggestion-item" data-suggestion="${suggestion}">${suggestion}</div>`;
+        });
+        suggestionsHtml += '</div>';
+
+        // Remove existing suggestions
+        $('.search-suggestions').remove();
+
+        // Add suggestions
+        $('.search-form').append(suggestionsHtml);
+
+        // Handle suggestion clicks
+        $('.suggestion-item').on('click', function () {
+            const suggestion = $(this).data('suggestion');
+            $('#blogSearchInput').val(suggestion);
+            hideSearchSuggestions();
+            performBlogSearch();
+        });
+    }
+}
+
+function hideSearchSuggestions() {
+    $('.search-suggestions').fadeOut(200, function () {
+        $(this).remove();
+    });
+}
+
+// Social Share Functionality
+function initializeSocialShare() {
+    $('.share-btn').on('click', function (e) {
+        e.preventDefault();
+
+        const platform = $(this).hasClass('facebook') ? 'facebook' :
+            $(this).hasClass('twitter') ? 'twitter' :
+                $(this).hasClass('linkedin') ? 'linkedin' :
+                    $(this).hasClass('whatsapp') ? 'whatsapp' :
+                        $(this).hasClass('copy-link') ? 'copy-link' : '';
+
+        if (platform) {
+            shareOnPlatform(platform);
+        }
+    });
+}
+
+function shareOnPlatform(platform) {
+    const url = window.location.href;
+    const title = $('.post-title').text() || 'eSIM Blog Yazısı';
+    const description = $('.post-content .lead').text() || 'eSIM teknolojisi hakkında detaylı bilgiler';
+
+    let shareUrl = '';
+
+    switch (platform) {
+        case 'facebook':
+            shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
+            break;
+        case 'twitter':
+            shareUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(title)}`;
+            break;
+        case 'linkedin':
+            shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`;
+            break;
+        case 'whatsapp':
+            shareUrl = `https://wa.me/?text=${encodeURIComponent(title + ' ' + url)}`;
+            break;
+        case 'copy-link':
+            copyLinkToClipboard(url);
+            return;
+    }
+
+    if (shareUrl) {
+        // Add sharing animation
+        const shareBtn = $(`.share-btn.${platform}`);
+        shareBtn.addClass('sharing-animation');
+
+        setTimeout(() => {
+            shareBtn.removeClass('sharing-animation');
+        }, 600);
+
+        // Open share window
+        window.open(shareUrl, 'share-window', 'width=600,height=400,scrollbars=yes,resizable=yes');
+
+        showBlogNotification('Paylaşım penceresi açıldı!', 'success');
+    }
+}
+
+function copyLinkToClipboard(url) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(url).then(() => {
+            showBlogNotification('Link panoya kopyalandı!', 'success');
+        }).catch(() => {
+            fallbackCopyToClipboard(url);
+        });
+    } else {
+        fallbackCopyToClipboard(url);
+    }
+}
+
+function fallbackCopyToClipboard(text) {
+    const textArea = document.createElement('textarea');
+    textArea.value = text;
+    textArea.style.position = 'fixed';
+    textArea.style.left = '-999999px';
+    textArea.style.top = '-999999px';
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+
+    try {
+        document.execCommand('copy');
+        showBlogNotification('Link panoya kopyalandı!', 'success');
+    } catch (err) {
+        showBlogNotification('Link kopyalanamadı. Manuel olarak kopyalayın.', 'error');
+    }
+
+    document.body.removeChild(textArea);
+}
+
+// Comment Form Functionality
+function initializeCommentForm() {
+    const commentForm = $('#commentForm');
+
+    if (commentForm.length) {
+        commentForm.on('submit', function (e) {
+            e.preventDefault();
+            handleCommentSubmission();
+        });
+
+        // Auto-resize textarea
+        const textarea = commentForm.find('textarea');
+        textarea.on('input', function () {
+            this.style.height = 'auto';
+            this.style.height = (this.scrollHeight) + 'px';
+        });
+
+        // Form validation
+        commentForm.find('input, textarea').on('blur', function () {
+            validateFormField($(this));
+        });
+    }
+
+    // Reply buttons
+    $('.comment-reply-btn').on('click', function () {
+        const commentItem = $(this).closest('.comment-item');
+        const author = commentItem.find('.comment-author').text();
+
+        // Scroll to comment form
+        $('html, body').animate({
+            scrollTop: $('#commentForm').offset().top - 100
+        }, 800);
+
+        // Pre-fill with reply mention
+        const textarea = $('#commentForm textarea');
+        textarea.val(`@${author} `).focus();
+
+        showBlogNotification(`${author} kullanıcısına yanıt yazıyorsunuz.`, 'info');
+    });
+}
+
+function handleCommentSubmission() {
+    const form = $('#commentForm');
+    const submitBtn = $('.comment-submit-btn');
+
+    // Validate form
+    if (!validateCommentForm()) {
+        return;
+    }
+
+    // Show loading state
+    const originalContent = submitBtn.html();
+    submitBtn.html('<i class="bx bx-loader-alt bx-spin"></i> Gönderiliyor...').prop('disabled', true);
+
+    // Simulate form submission (replace with actual submission)
+    setTimeout(() => {
+        // Reset form
+        form[0].reset();
+
+        // Reset button
+        submitBtn.html(originalContent).prop('disabled', false);
+
+        // Show success message
+        showBlogNotification('Yorumunuz başarıyla gönderildi! Onay bekliyor.', 'success');
+
+        // Optionally add the comment to the comments list immediately
+        addNewComment({
+            author: form.find('input[type="text"]').val(),
+            text: form.find('textarea').val(),
+            date: 'Şimdi'
+        });
+
+    }, 2000);
+}
+
+function validateCommentForm() {
+    const form = $('#commentForm');
+    let isValid = true;
+
+    form.find('input[required], textarea[required]').each(function () {
+        if (!validateFormField($(this))) {
+            isValid = false;
+        }
+    });
+
+    const checkbox = form.find('#privacyCheck');
+    if (!checkbox.is(':checked')) {
+        showFieldError(checkbox, 'Gizlilik politikasını kabul etmelisiniz.');
+        isValid = false;
+    } else {
+        clearFieldError(checkbox);
+    }
+
+    return isValid;
+}
+
+function validateFormField(field) {
+    const value = field.val().trim();
+    let isValid = true;
+    let errorMessage = '';
+
+    if (field.prop('required') && value === '') {
+        errorMessage = 'Bu alan zorunludur.';
+        isValid = false;
+    } else if (field.attr('type') === 'email' && value !== '') {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(value)) {
+            errorMessage = 'Geçerli bir e-posta adresi girin.';
+            isValid = false;
+        }
+    } else if (field.is('textarea') && value.length > 0 && value.length < 10) {
+        errorMessage = 'Yorum en az 10 karakter olmalıdır.';
+        isValid = false;
+    }
+
+    if (isValid) {
+        clearFieldError(field);
+    } else {
+        showFieldError(field, errorMessage);
+    }
+
+    return isValid;
+}
+
+function showFieldError(field, message) {
+    clearFieldError(field);
+
+    field.addClass('is-invalid');
+    const errorDiv = $(`<div class="invalid-feedback">${message}</div>`);
+    field.after(errorDiv);
+}
+
+function clearFieldError(field) {
+    field.removeClass('is-invalid');
+    field.next('.invalid-feedback').remove();
+}
+
+function addNewComment(commentData) {
+    const commentHtml = `
+        <div class="comment-item new-comment" style="opacity: 0;">
+            <div class="comment-avatar">
+                <img src="https://via.placeholder.com/50x50/667eea/ffffff?text=${commentData.author.charAt(0)}" alt="Avatar">
+            </div>
+            <div class="comment-content">
+                <div class="comment-header">
+                    <h6 class="comment-author">${commentData.author}</h6>
+                    <span class="comment-date">${commentData.date}</span>
+                </div>
+                <p class="comment-text">${commentData.text}</p>
+                <button class="comment-reply-btn">
+                    <i class='bx bx-reply'></i>
+                    Yanıtla
+                </button>
+            </div>
+        </div>
+    `;
+
+    $('.comments-list').append(commentHtml);
+
+    // Animate new comment
+    $('.new-comment').animate({ opacity: 1 }, 500).removeClass('new-comment');
+
+    // Update comment count
+    const currentCount = parseInt($('.comments-title').text().match(/\d+/)[0]);
+    $('.comments-title').text(`Yorumlar (${currentCount + 1})`);
+
+    // Re-bind reply button for new comment
+    $('.comment-reply-btn:last').on('click', function () {
+        const commentItem = $(this).closest('.comment-item');
+        const author = commentItem.find('.comment-author').text();
+
+        // Scroll to comment form
+        $('html, body').animate({
+            scrollTop: $('#commentForm').offset().top - 100
+        }, 800);
+
+        // Pre-fill with reply mention
+        const textarea = $('#commentForm textarea');
+        textarea.val(`@${author} `).focus();
+
+        showBlogNotification(`${author} kullanıcısına yanıt yazıyorsunuz.`, 'info');
+    });
+}
+
+// Link Copy Functionality
+function initializeLinkCopy() {
+    // Add copy functionality to all relevant links
+    $('.post-title').on('dblclick', function () {
+        copyLinkToClipboard(window.location.href);
+    });
+}
+
+// Blog Animations
+function initializeBlogAnimations() {
+    // Parallax effect for hero section
+    $(window).on('scroll', function () {
+        const scrollTop = $(window).scrollTop();
+        const heroSection = $('.blog-hero-section');
+
+        if (heroSection.length) {
+            const heroOffset = heroSection.offset().top;
+            const heroHeight = heroSection.outerHeight();
+
+            if (scrollTop < heroOffset + heroHeight) {
+                const parallaxSpeed = 0.5;
+                const yPos = -(scrollTop * parallaxSpeed);
+                heroSection.css('transform', `translateY(${yPos}px)`);
+            }
+        }
+    });
+
+    // Smooth scroll for anchor links in blog content
+    $('.post-content a[href^="#"]').on('click', function (e) {
+        const target = $($(this).attr('href'));
+        if (target.length) {
+            e.preventDefault();
+            $('html, body').animate({
+                scrollTop: target.offset().top - 100
+            }, 800);
+        }
+    });
+
+    // Image lazy loading effect
+    $('.post-featured-image img, .post-thumb img').on('load', function () {
+        $(this).addClass('loaded');
+    });
+
+    // Hover effects for interactive elements
+    $('.category-item, .recent-post-item, .tag-item').hover(
+        function () {
+            $(this).addClass('hovered');
+        },
+        function () {
+            $(this).removeClass('hovered');
+        }
+    );
+}
+
+// Initialize Tooltips
+function initializeTooltips() {
+    // Initialize Bootstrap tooltips
+    const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+    });
+}
+
+// Reading Progress Bar
+function initializeReadingProgress() {
+    if ($('.blog-post-detail').length) {
+        // Create progress bar
+        const progressBar = $('<div class="reading-progress"><div class="progress-fill"></div></div>');
+        $('body').append(progressBar);
+
+        $(window).on('scroll', function () {
+            const postContent = $('.post-content');
+            if (postContent.length) {
+                const contentTop = postContent.offset().top;
+                const contentHeight = postContent.outerHeight();
+                const windowHeight = $(window).height();
+                const scrollTop = $(window).scrollTop();
+
+                const startReading = contentTop - windowHeight + 200;
+                const endReading = contentTop + contentHeight;
+
+                if (scrollTop >= startReading && scrollTop <= endReading) {
+                    const progress = ((scrollTop - startReading) / (endReading - startReading)) * 100;
+                    $('.progress-fill').css('width', Math.min(Math.max(progress, 0), 100) + '%');
+                    progressBar.addClass('visible');
+                } else {
+                    progressBar.removeClass('visible');
+                }
+            }
+        });
+    }
+}
+
+// Blog Notification System
+function showBlogNotification(message, type = 'info') {
+    // Remove existing notifications
+    $('.blog-notification').remove();
+
+    const iconMap = {
+        'success': 'bx-check-circle',
+        'error': 'bx-error-circle',
+        'warning': 'bx-error',
+        'info': 'bx-info-circle'
+    };
+
+    const notification = $(`
+        <div class="blog-notification notification-${type}">
+            <div class="notification-content">
+                <i class="bx ${iconMap[type]}"></i>
+                <span>${message}</span>
+            </div>
+            <button class="notification-close">
+                <i class="bx bx-x"></i>
+            </button>
+        </div>
+    `);
+
+    $('body').append(notification);
+
+    // Show notification
+    setTimeout(() => {
+        notification.addClass('show');
+    }, 100);
+
+    // Auto hide after 4 seconds
+    setTimeout(() => {
+        hideNotification(notification);
+    }, 4000);
+
+    // Close button functionality
+    notification.find('.notification-close').on('click', function () {
+        hideNotification(notification);
+    });
+}
+
+function hideNotification(notification) {
+    notification.removeClass('show');
+    setTimeout(() => {
+        notification.remove();
+    }, 300);
+}
+
+// Category Filter Animation
+function initializeCategoryFilter() {
+    $('.category-item').on('click', function (e) {
+        e.preventDefault();
+
+        // Remove active class from all categories
+        $('.category-item').removeClass('active');
+
+        // Add active class to clicked category
+        $(this).addClass('active');
+
+        // Add loading animation
+        const category = $(this).text().split('(')[0].trim();
+        showBlogNotification(`${category} kategorisi yükleniyor...`, 'info');
+
+        // Here you would typically filter posts or redirect
+        // For demo purposes, we'll just show a message
+        setTimeout(() => {
+            showBlogNotification(`${category} kategorisindeki yazılar gösteriliyor.`, 'success');
+        }, 1000);
+    });
+}
+
+// Initialize category filter when DOM is ready
+$(document).ready(function () {
+    if ($('.categories-widget').length) {
+        initializeCategoryFilter();
+    }
+});
+
+// CSS for notifications and reading progress (inject into head)
+$(document).ready(function () {
+    const notificationStyles = `
+        <style>
+        .blog-notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #fff;
+            border-radius: 10px;
+            padding: 15px 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-left: 4px solid #667eea;
+            z-index: 9999;
+            transform: translateX(400px);
+            opacity: 0;
+            transition: all 0.3s ease;
+            min-width: 300px;
+            max-width: 400px;
+        }
+        
+        .blog-notification.show {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        
+        .blog-notification.notification-success {
+            border-left-color: #28a745;
+        }
+        
+        .blog-notification.notification-error {
+            border-left-color: #dc3545;
+        }
+        
+        .blog-notification.notification-warning {
+            border-left-color: #ffc107;
+        }
+        
+        .notification-content {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #333;
+            font-weight: 500;
+        }
+        
+        .notification-content i {
+            font-size: 18px;
+            color: #667eea;
+        }
+        
+        .notification-success .notification-content i {
+            color: #28a745;
+        }
+        
+        .notification-error .notification-content i {
+            color: #dc3545;
+        }
+        
+        .notification-warning .notification-content i {
+            color: #ffc107;
+        }
+        
+        .notification-close {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background: none;
+            border: none;
+            color: #999;
+            cursor: pointer;
+            padding: 5px;
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .notification-close:hover {
+            background: #f1f1f1;
+            color: #333;
+        }
+        
+        .reading-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: rgba(0, 0, 0, 0.1);
+            z-index: 9998;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .reading-progress.visible {
+            opacity: 1;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+        
+        .search-suggestions {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: #fff;
+            border: 1px solid #e9ecef;
+            border-top: none;
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+        
+        .suggestion-item {
+            padding: 12px 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid #f1f1f1;
+        }
+        
+        .suggestion-item:last-child {
+            border-bottom: none;
+        }
+        
+        .suggestion-item:hover {
+            background: #f8f9fa;
+            color: #667eea;
+        }
+        
+        .sharing-animation {
+            animation: shareKeyframes 0.6s ease;
+        }
+        
+        @keyframes shareKeyframes {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2) rotate(5deg); }
+        }
+        
+        .is-invalid {
+            border-color: #dc3545 !important;
+            box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25) !important;
+        }
+        
+        .invalid-feedback {
+            display: block;
+            width: 100%;
+            margin-top: 0.25rem;
+            font-size: 0.875rem;
+            color: #dc3545;
+        }
+        
+        @media (max-width: 768px) {
+            .blog-notification {
+                right: 10px;
+                left: 10px;
+                min-width: auto;
+                max-width: none;
+                transform: translateY(-100px);
+            }
+            
+            .blog-notification.show {
+                transform: translateY(0);
+            }
+        }
+        </style>
+    `;
+
+    $('head').append(notificationStyles);
+});
+
+// =================================
+//   Blog Page JavaScript
+// =================================
+
+$(document).ready(function () {
+    // Blog Search Functionality
+    let blogSearchTimeout;
+
+    $('.blog-search-input').on('input', function () {
+        const query = $(this).val();
+
+        clearTimeout(blogSearchTimeout);
+
+        if (query.length > 2) {
+            blogSearchTimeout = setTimeout(() => {
+                blogSearchPosts(query);
+            }, 300);
+        } else {
+            $('.blog-search-suggestions').remove();
+        }
+    });
+
+    function blogSearchPosts(query) {
+        // Simulate search suggestions
+        const suggestions = [
+            'eSIM kurulum rehberi',
+            'iPhone eSIM aktivasyonu',
+            'Android eSIM ayarları',
+            'Seyahat eSIM paketleri',
+            '5G eSIM performansı'
+        ].filter(item => item.toLowerCase().includes(query.toLowerCase()));
+
+        if (suggestions.length > 0) {
+            showBlogSearchSuggestions(suggestions);
+        }
+    }
+
+    function showBlogSearchSuggestions(suggestions) {
+        $('.blog-search-suggestions').remove();
+
+        const suggestionsHtml = `
+            <div class="blog-search-suggestions">
+                ${suggestions.map(suggestion => `
+                    <div class="blog-search-suggestion" data-suggestion="${suggestion}">
+                        <i class='bx bx-search'></i>
+                        ${suggestion}
+                    </div>
+                `).join('')}
+            </div>
+        `;
+
+        $('.blog-search-container').append(suggestionsHtml);
+    }
+
+    // Handle search suggestion clicks
+    $(document).on('click', '.blog-search-suggestion', function () {
+        const suggestion = $(this).data('suggestion');
+        $('.blog-search-input').val(suggestion);
+        $('.blog-search-suggestions').remove();
+        blogPerformSearch(suggestion);
+    });
+
+    // Hide suggestions when clicking outside
+    $(document).on('click', function (e) {
+        if (!$(e.target).closest('.blog-search-container').length) {
+            $('.blog-search-suggestions').remove();
+        }
+    });
+
+    // Blog Search Submit
+    $('.blog-search-btn, .blog-newsletter-form').on('submit click', function (e) {
+        e.preventDefault();
+        const query = $('.blog-search-input').val();
+        if (query.trim()) {
+            blogPerformSearch(query);
+        }
+    });
+
+    function blogPerformSearch(query) {
+        // Show loading state
+        $('.blog-search-btn').html('<div class="blog-loading"></div>');
+
+        // Simulate search - filter existing posts
+        setTimeout(() => {
+            blogFilterPosts('search', query);
+            $('.blog-search-btn').html('<i class="bx bx-search"></i>');
+            $('.blog-search-suggestions').remove();
+        }, 1000);
+    }
+
+    // Blog Category Filtering
+    $('.blog-filter-btn').on('click', function (e) {
+        e.preventDefault();
+
+        $('.blog-filter-btn').removeClass('active');
+        $(this).addClass('active');
+
+        const category = $(this).data('category');
+        blogFilterPosts('category', category);
+    });
+
+    // Sidebar category filtering
+    $('.blog-category-item').on('click', function (e) {
+        e.preventDefault();
+
+        const category = $(this).data('category');
+
+        // Update active filter button
+        $('.blog-filter-btn').removeClass('active');
+        $(`.blog-filter-btn[data-category="${category}"]`).addClass('active');
+
+        blogFilterPosts('category', category);
+
+        // Scroll to posts section
+        $('html, body').animate({
+            scrollTop: $('.blog-content-section').offset().top - 100
+        }, 800);
+    });
+
+    function blogFilterPosts(type, value) {
+        const $posts = $('.blog-post-card, .blog-featured-post');
+
+        $posts.each(function () {
+            const $post = $(this);
+            let shouldShow = false;
+
+            if (type === 'category') {
+                if (value === 'all') {
+                    shouldShow = true;
+                } else {
+                    shouldShow = $post.data('category') === value;
+                }
+            } else if (type === 'search') {
+                const title = $post.find('.blog-post-title, .blog-featured-title').text().toLowerCase();
+                const excerpt = $post.find('.blog-post-excerpt, .blog-featured-excerpt').text().toLowerCase();
+                shouldShow = title.includes(value.toLowerCase()) || excerpt.includes(value.toLowerCase());
+            }
+
+            if (shouldShow) {
+                $post.fadeIn(400);
+            } else {
+                $post.fadeOut(400);
+            }
+        });
+
+        // Update results count
+        setTimeout(() => {
+            const visiblePosts = $('.blog-post-card:visible, .blog-featured-post:visible').length;
+            updateBlogResultsCount(visiblePosts);
+        }, 500);
+    }
+
+    function updateBlogResultsCount(count) {
+        if (count === 0) {
+            if (!$('.blog-no-results').length) {
+                $('.blog-posts-grid').after(`
+                    <div class="blog-no-results text-center" style="padding: 40px;">
+                        <i class='bx bx-search-alt' style="font-size: 4rem; color: #ccc; margin-bottom: 20px;"></i>
+                        <h4 style="color: #666;">Sonuç bulunamadı</h4>
+                        <p style="color: #888;">Arama kriterlerinizi değiştirerek tekrar deneyin.</p>
+                    </div>
+                `);
+            }
+        } else {
+            $('.blog-no-results').remove();
+        }
+    }
+
+    // View Toggle (Grid/List)
+    $('.blog-view-btn').on('click', function () {
+        $('.blog-view-btn').removeClass('active');
+        $(this).addClass('active');
+
+        const view = $(this).data('view');
+        const $grid = $('.blog-posts-grid');
+
+        if (view === 'list') {
+            $grid.addClass('list-view');
+        } else {
+            $grid.removeClass('list-view');
+        }
+
+        // Add transition effect
+        $grid.css('opacity', '0.5');
+        setTimeout(() => {
+            $grid.css('opacity', '1');
+        }, 200);
+    });
+
+    // Load More Posts
+    $('.blog-load-more-btn').on('click', function () {
+        const $btn = $(this);
+        const originalText = $btn.html();
+
+        // Show loading state
+        $btn.html('<div class="blog-loading"></div> Yükleniyor...');
+        $btn.prop('disabled', true);
+
+        // Simulate loading more posts
+        setTimeout(() => {
+            blogLoadMorePosts();
+            $btn.html(originalText);
+            $btn.prop('disabled', false);
+        }, 2000);
+    });
+
+    function blogLoadMorePosts() {
+        // Add new posts (simulation)
+        const newPosts = [
+            {
+                category: 'guide',
+                image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+                title: 'eSIM ile Roaming Ücretlerini Nasıl Düşürürsünüz?',
+                excerpt: 'Yurt dışında pahalı roaming ücretleri ödemek zorunda değilsiniz. eSIM ile maliyetlerinizi %80 düşürün.',
+                author: 'Fatma Yıldırım',
+                date: '25 Kasım 2024',
+                readTime: '5 dk'
+            },
+            {
+                category: 'news',
+                image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+                title: 'Türk Telekom eSIM Desteğini Genişletti',
+                excerpt: 'Türk Telekom, eSIM teknolojisini daha fazla cihazda kullanılabilir hale getirdi.',
+                author: 'Mehmet Koç',
+                date: '22 Kasım 2024',
+                readTime: '3 dk'
+            }
+        ];
+
+        newPosts.forEach((post, index) => {
+            const postHtml = `
+                <div class="blog-post-card" data-category="${post.category}" data-aos="fade-up" data-aos-delay="${(index + 1) * 100}" style="display: none;">
+                    <div class="blog-post-image">
+                        <img src="${post.image}" alt="${post.title}">
+                        <div class="blog-post-overlay">
+                            <a href="blog_detail.html" class="blog-read-more">
+                                <i class='bx bx-right-arrow-alt'></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="blog-post-content">
+                        <div class="blog-post-meta">
+                            <span class="blog-category blog-category-${post.category}">
+                                <i class='bx ${post.category === 'guide' ? 'bx-book-open' : 'bx-news'}'></i>
+                                ${post.category === 'guide' ? 'Rehber' : 'Haberler'}
+                            </span>
+                            <span class="blog-date">
+                                <i class='bx bx-time'></i>
+                                ${post.date}
+                            </span>
+                        </div>
+                        <h3 class="blog-post-title">
+                            <a href="blog_detail.html">${post.title}</a>
+                        </h3>
+                        <p class="blog-post-excerpt">${post.excerpt}</p>
+                        <div class="blog-post-footer">
+                            <div class="blog-author-mini">
+                                <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=30&q=80" alt="Yazar">
+                                <span>${post.author}</span>
+                            </div>
+                            <span class="blog-read-time">
+                                <i class='bx bx-book'></i>
+                                ${post.readTime}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            $('.blog-posts-grid').append(postHtml);
+        });
+
+        // Show new posts with animation
+        $('.blog-post-card:hidden').fadeIn(600);
+
+        // Reinitialize AOS for new elements
+        AOS.refresh();
+
+        // Show success message
+        blogShowNotification('Yeni yazılar yüklendi!', 'success');
+    }
+
+    // Newsletter Subscription
+    $('.blog-newsletter-form').on('submit', function (e) {
+        e.preventDefault();
+
+        const email = $('.blog-newsletter-input').val();
+        const $btn = $('.blog-newsletter-btn');
+        const originalText = $btn.html();
+
+        if (!blogValidateEmail(email)) {
+            blogShowNotification('Geçerli bir e-posta adresi girin.', 'error');
+            return;
+        }
+
+        // Show loading state
+        $btn.html('<div class="blog-loading"></div>');
+        $btn.prop('disabled', true);
+
+        // Simulate subscription
+        setTimeout(() => {
+            $('.blog-newsletter-input').val('');
+            $btn.html(originalText);
+            $btn.prop('disabled', false);
+
+            blogShowNotification('E-bülten aboneliğiniz başarıyla oluşturuldu!', 'success');
+        }, 1500);
+    });
+
+    function blogValidateEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email);
+    }
+
+    // Notification System
+    function blogShowNotification(message, type = 'info') {
+        const icons = {
+            success: 'bx-check-circle',
+            error: 'bx-error-circle',
+            info: 'bx-info-circle'
+        };
+
+        const colors = {
+            success: '#28a745',
+            error: '#dc3545',
+            info: '#17a2b8'
+        };
+
+        const notification = $(`
+            <div class="blog-notification blog-notification-${type}" style="
+                position: fixed;
+                top: 100px;
+                right: 30px;
+                background: white;
+                color: ${colors[type]};
+                padding: 15px 20px;
+                border-radius: 10px;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+                border-left: 4px solid ${colors[type]};
+                z-index: 9999;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                min-width: 300px;
+                transform: translateX(400px);
+                transition: transform 0.3s ease;
+            ">
+                <i class='bx ${icons[type]}' style="font-size: 20px;"></i>
+                <span>${message}</span>
+                <button class="blog-notification-close" style="
+                    background: none;
+                    border: none;
+                    font-size: 18px;
+                    cursor: pointer;
+                    color: ${colors[type]};
+                    margin-left: auto;
+                ">
+                    <i class='bx bx-x'></i>
+                </button>
+            </div>
+        `);
+
+        $('body').append(notification);
+
+        // Show notification
+        setTimeout(() => {
+            notification.css('transform', 'translateX(0)');
+        }, 100);
+
+        // Auto hide after 5 seconds
+        setTimeout(() => {
+            blogHideNotification(notification);
+        }, 5000);
+
+        // Manual close
+        notification.find('.blog-notification-close').on('click', function () {
+            blogHideNotification(notification);
+        });
+    }
+
+    function blogHideNotification($notification) {
+        $notification.css('transform', 'translateX(400px)');
+        setTimeout(() => {
+            $notification.remove();
+        }, 300);
+    }
+
+    // Scroll to Top on Pagination
+    $('.blog-pagination-link').on('click', function (e) {
+        e.preventDefault();
+
+        $('html, body').animate({
+            scrollTop: $('.blog-content-section').offset().top - 100
+        }, 800);
+
+        // Update pagination state
+        $('.blog-pagination-item').removeClass('active');
+        $(this).parent().addClass('active');
+
+        // Simulate page loading
+        $('.blog-posts-container').css('opacity', '0.5');
+        setTimeout(() => {
+            $('.blog-posts-container').css('opacity', '1');
+        }, 500);
+    });
+
+    // Reading Progress Bar (for individual posts)
+    if ($('.blog-post-content').length) {
+        const $progressBar = $('<div class="blog-reading-progress"></div>').css({
+            position: 'fixed',
+            top: '0',
+            left: '0',
+            width: '0%',
+            height: '3px',
+            background: 'linear-gradient(135deg, #667eea, #764ba2)',
+            zIndex: '9999',
+            transition: 'width 0.3s ease'
+        });
+
+        $('body').prepend($progressBar);
+
+        $(window).on('scroll', function () {
+            const scrollTop = $(window).scrollTop();
+            const docHeight = $(document).height() - $(window).height();
+            const scrollPercent = (scrollTop / docHeight) * 100;
+
+            $progressBar.css('width', scrollPercent + '%');
+        });
+    }
+
+    // Social Share Hover Effects
+    $('.blog-social-link').hover(
+        function () {
+            $(this).find('i').css('transform', 'scale(1.2) rotate(5deg)');
+        },
+        function () {
+            $(this).find('i').css('transform', 'scale(1) rotate(0deg)');
+        }
+    );
+
+    // Image Lazy Loading Effect
+    $('.blog-post-image img, .blog-featured-image img').on('load', function () {
+        $(this).css({
+            opacity: '0',
+            transform: 'scale(1.1)'
+        }).animate({
+            opacity: 1
+        }, 500, function () {
+            $(this).css('transform', 'scale(1)');
+        });
+    });
+
+    // Enhanced Hover Effects for Cards
+    $('.blog-post-card').hover(
+        function () {
+            $(this).find('.blog-post-image img').css('transform', 'scale(1.05)');
+        },
+        function () {
+            $(this).find('.blog-post-image img').css('transform', 'scale(1)');
+        }
+    );
+
+    // Smooth scroll for anchor links in blog
+    $('.blog-category-item, .blog-filter-btn').on('click', function (e) {
+        if ($(this).attr('href') && $(this).attr('href').startsWith('#')) {
+            e.preventDefault();
+            const target = $($(this).attr('href'));
+            if (target.length) {
+                $('html, body').animate({
+                    scrollTop: target.offset().top - 100
+                }, 800);
+            }
+        }
+    });
+
+    // Initialize tooltips for blog elements
+    $('[data-bs-toggle="tooltip"]').tooltip();
+
+    // Auto-hide navbar on scroll for mobile
+    let lastScrollTop = 0;
+    $(window).on('scroll', function () {
+        if ($(window).width() <= 768) {
+            const scrollTop = $(this).scrollTop();
+            if (scrollTop > lastScrollTop && scrollTop > 100) {
+                $('.navbar').addClass('navbar-hidden');
+            } else {
+                $('.navbar').removeClass('navbar-hidden');
+            }
+            lastScrollTop = scrollTop;
+        }
+    });
+
+    // Add CSS for navbar hide effect
+    if (!$('#blog-navbar-hide-css').length) {
+        $('<style id="blog-navbar-hide-css">').html(`
+            .navbar-hidden {
+                transform: translateY(-100%);
+                transition: transform 0.3s ease;
+            }
+            
+            .navbar {
+                transition: transform 0.3s ease;
+            }
+        `).appendTo('head');
+    }
+});
+
+// Blog Search Animation
+function blogAnimateSearchIcon() {
+    $('.blog-search-icon').css('transform', 'rotate(0deg)');
+    setTimeout(() => {
+        $('.blog-search-icon').css('transform', 'rotate(360deg)');
+    }, 100);
+}
+
+// Intersection Observer for animations
+if ('IntersectionObserver' in window) {
+    const blogObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('blog-animate-in');
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    });
+
+    // Observe blog elements
+    document.querySelectorAll('.blog-post-card, .blog-sidebar-widget, .blog-featured-post').forEach(el => {
+        blogObserver.observe(el);
+    });
+}
+
+// Add CSS for intersection observer animations
+$('<style>').html(`
+    .blog-animate-in {
+        animation: blogSlideInUp 0.6s ease forwards;
+    }
+    
+    @keyframes blogSlideInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+`).appendTo('head');

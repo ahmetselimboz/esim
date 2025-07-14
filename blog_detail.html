@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eSIM Blog Detayı | eSIM Türkiye</title>
+    <meta name="description" content="eSIM teknolojisi hakkında detaylı bilgiler ve güncel haberler">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="navbar-area">
+        <!-- Top Bar -->
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-bar-content">
+                    <div class="social-links">
+                        <a href="#" data-bs-toggle="tooltip" title="Facebook">
+                            <i class='bx bxl-facebook'></i>
+                        </a>
+                        <a href="#" data-bs-toggle="tooltip" title="Twitter">
+                            <i class='bx bxl-twitter'></i>
+                        </a>
+                        <a href="#" data-bs-toggle="tooltip" title="Instagram">
+                            <i class='bx bxl-instagram'></i>
+                        </a>
+                        <a href="#" data-bs-toggle="tooltip" title="YouTube">
+                            <i class='bx bxl-youtube'></i>
+                        </a>
+                        <a href="#" data-bs-toggle="tooltip" title="LinkedIn">
+                            <i class='bx bxl-linkedin'></i>
+                        </a>
+                    </div>
+                    <div class="contact-info">
+                        <a href="tel:+908505320000" class="contact-item">
+                            <i class='bx bx-phone'></i>
+                            <span>0 850 532 0000</span>
+                        </a>
+                        <a href="mailto:destek@esim.com.tr" class="contact-item">
+                            <i class='bx bx-envelope'></i>
+                            <span>destek@esim.com.tr</span>
+                        </a>
+                        <a href="#" class="contact-item d-none d-md-block">
+                            <i class='bx bx-support'></i>
+                            <span>7/24 Destek</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Navbar -->
+        <nav class="navbar navbar-expand-lg main-navbar">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <div class="logo">e</div>
+                    <span>eSIM Türkiye</span>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <i class='bx bx-menu navbar-toggler-icon'></i>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <div class="navbar-nav ms-auto">
+
+
+                        <!-- <div class="dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button">
+                                <i class='bx bx-sim'></i>
+                                eSIM Paketleri
+                                <i class='bx bx-chevron-down'></i>
+                            </a>
+                            <div class="mega-menu">
+                                <div class="mega-menu-content">
+                                    <div class="mega-menu-section">
+                                        <h6>Yurtiçi Paketler</h6>
+                                        <ul>
+                                            <li><a href="#"><i class='bx bx-data'></i>Günlük Paketler</a></li>
+                                            <li><a href="#"><i class='bx bx-calendar'></i>Haftalık Paketler</a></li>
+                                            <li><a href="#"><i class='bx bx-calendar-alt'></i>Aylık Paketler</a></li>
+                                            <li><a href="#"><i class='bx bx-infinite'></i>Limitsiz Paketler</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="mega-menu-section">
+                                        <h6>Uluslararası Paketler</h6>
+                                        <ul>
+                                            <li><a href="#"><i class='bx bx-world'></i>Avrupa Paketleri</a></li>
+                                            <li><a href="#"><i class='bx bx-globe'></i>Amerika Paketleri</a></li>
+                                            <li><a href="#"><i class='bx bx-map'></i>Asya Paketleri</a></li>
+                                            <li><a href="#"><i class='bx bx-planet'></i>Dünya Geneli</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+
+                        <div class="dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button">
+                                <i class='bx bx-help-circle'></i>
+                                Nasıl Çalışır?
+                                <i class='bx bx-chevron-down'></i>
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">
+                                    <i class='bx bx-info-circle'></i>
+                                    eSIM Nedir?
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class='bx bx-download'></i>
+                                    Nasıl Yüklenir?
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class='bx bx-cog'></i>
+                                    Kurulum Rehberi
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class='bx bx-mobile'></i>
+                                    Uyumlu Cihazlar
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button">
+                                <i class='bx bx-support'></i>
+                                Destek
+                                <i class='bx bx-chevron-down'></i>
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">
+                                    <i class='bx bx-question-mark'></i>
+                                    Sık Sorulan Sorular
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class='bx bx-chat'></i>
+                                    Canlı Destek
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class='bx bx-book'></i>
+                                    Kullanım Kılavuzu
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class='bx bx-phone-call'></i>
+                                    İletişim
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button">
+                                <i class='bx bx-building'></i>
+                                Kurumsal
+                                <i class='bx bx-chevron-down'></i>
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">
+                                    <i class='bx bx-info-circle'></i>
+                                    Hakkımızda
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class='bx bx-briefcase'></i>
+                                    Kurumsal Çözümler
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class='bx bx-notepad'></i>
+                                    Partnerlik
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class='bx bx-news'></i>
+                                    Haberler
+                                </a>
+                            </div>
+                        </div>
+                        <!-- <a class="nav-link" href="#">
+                            <i class='bx bx-user-circle'></i>
+                            Hakkımızda
+                        </a> -->
+                        <!-- Oturum Açıldığında -->
+                        <!-- <a class="nav-link" href="#">
+                            <i class='bx bx-user-circle'></i>
+                            Hesabım
+                        </a> -->
+                        <div class="dropdown currency-dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button">
+                                <i class='bx bx-globe'></i>
+                                <span class="currency-text">TR</span>
+                                <i class='bx bx-chevron-down'></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end" style="top: 36px;">
+                                <a class="dropdown-item currency-item active" href="#" data-lang="tr">
+                                    <img src="https://flagcdn.com/w20/tr.png" alt="Türkçe" class="flag-icon">
+                                    <span>Türkçe</span>
+                                </a>
+                                <a class="dropdown-item currency-item" href="#" data-lang="en">
+                                    <img src="https://flagcdn.com/w20/us.png" alt="English" class="flag-icon">
+                                    <span>English</span>
+                                </a>
+                                <a class="dropdown-item currency-item" href="#" data-lang="ar">
+                                    <img src="https://flagcdn.com/w20/sa.png" alt="العربية" class="flag-icon">
+                                    <span>العربية</span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Döviz Kuru Seçeneği -->
+                        <div class="dropdown currency-dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button">
+                                <i class='bx bx-dollar-circle'></i>
+                                <span class="currency-text">TRY</span>
+                                <i class='bx bx-chevron-down'></i>
+                            </a>
+
+                            <div class="dropdown-menu dropdown-menu-end" style="top: 36px;">
+                                <a class="dropdown-item currency-item active" href="#" data-currency="try">
+                                    <i class='bx bx-lira currency-icon'></i>
+                                    <span>TRY - Türk Lirası</span>
+                                </a>
+                                <a class="dropdown-item currency-item" href="#" data-currency="usd">
+                                    <i class='bx bx-dollar currency-icon'></i>
+                                    <span>USD - Amerikan Doları</span>
+                                </a>
+                                <a class="dropdown-item currency-item" href="#" data-currency="eur">
+                                    <i class='bx bx-euro currency-icon'></i>
+                                    <span>EUR - Euro</span>
+                                </a>
+                                <a class="dropdown-item currency-item" href="#" data-currency="gbp">
+                                    <i class='bx bx-pound currency-icon'></i>
+                                    <span>GBP - İngiliz Sterlini</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Oturum Açık Değilse -->
+                        <a class="cta-button" href="#">
+                            <i class='bx bx-user'></i>
+                            Üye Ol/Giriş Yap
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Blog Hero Section -->
+    <section class="blog-hero-section margin-top-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center" data-aos="fade-up">
+                    <nav aria-label="breadcrumb" class="blog-breadcrumb">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a href="index.html">Ana Sayfa</a></li>
+                            <li class="breadcrumb-item"><a href="#">Blog</a></li>
+                            <li class="breadcrumb-item active">eSIM Teknolojisinin Geleceği</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Blog Content -->
+    <section class="blog-content-section py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Sidebar - Right Side -->
+                <div class="col-lg-3 col-md-12">
+                    <div class="blog-sidebar" data-aos="fade-left">
+                        <!-- Search Box -->
+                        <div class="sidebar-widget search-widget mb-4">
+                            <h5 class="widget-title">Blog Ara</h5>
+                            <div class="search-form">
+                                <input type="text" class="form-control" placeholder="Arama yapın..."
+                                    id="blogSearchInput">
+                                <button type="button" class="search-btn">
+                                    <i class='bx bx-search'></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Categories -->
+                        <div class="sidebar-widget categories-widget mb-4">
+                            <h5 class="widget-title">Kategoriler</h5>
+                            <ul class="category-list">
+                                <li><a href="#" class="category-item active">eSIM Teknolojisi <span>(12)</span></a></li>
+                                <li><a href="#" class="category-item">Seyahat İpuçları <span>(8)</span></a></li>
+                                <li><a href="#" class="category-item">Mobil İnternet <span>(15)</span></a></li>
+                                <li><a href="#" class="category-item">Güvenlik <span>(6)</span></a></li>
+                                <li><a href="#" class="category-item">Kurulum Rehberi <span>(10)</span></a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Main Blog Content - Left Side -->
+                <div class="col-lg-6 col-md-12 mb-4">
+                    <article class="blog-post-detail" data-aos="fade-right">
+                        <!-- Post Header -->
+                        <div class="post-header mb-4">
+                            <div class="post-meta row mb-4 mb-lg-3">
+                                <span class="meta-item col-lg-3 col-5">
+                                    <i class='bx bx-calendar'></i>
+                                    18 Ocak 2025
+                                </span>
+                                <span class="meta-item col-lg-3 col-5">
+                                    <i class='bx bx-user'></i>
+                                    Ahmet Yılmaz
+                                </span>
+                                <span class="meta-item col-lg-3 col-5">
+                                    <i class='bx bx-folder'></i>
+                                    eSIM Teknolojisi
+                                </span>
+                                <span class="meta-item col-lg-3 col-5">
+                                    <i class='bx bx-time'></i>
+                                    5 dk okuma
+                                </span>
+                            </div>
+                            <h1 class="post-title">eSIM Teknolojisinin Geleceği: 2025 ve Sonrası</h1>
+                            <div class="post-featured-image mt-4">
+                                <img src="https://via.placeholder.com/800x400/667eea/ffffff?text=eSIM+Future"
+                                    alt="eSIM Teknolojisinin Geleceği" class="img-fluid rounded">
+                            </div>
+                        </div>
+
+                        <!-- Post Content -->
+                        <div class="post-content">
+                            <div class="content-section mb-4">
+                                <p class="lead">eSIM teknolojisi, mobil iletişimde devrim yaratmaya devam ediyor. 2025
+                                    yılında bu teknolojinin nasıl şekilleneceğini ve gelecekte neler beklediğimizi
+                                    birlikte keşfedelim.</p>
+
+                                <p>Embedded SIM (eSIM) teknolojisi, son yıllarda hızla yaygınlaşarak mobil dünyada büyük
+                                    bir dönüşüm başlattı. Fiziksel SIM kartların yerini alan bu teknoloji, kullanıcılara
+                                    benzersiz bir esneklik ve rahatlık sunuyor.</p>
+                            </div>
+
+                            <div class="content-section mb-4">
+                                <h3>2025'te eSIM Trendleri</h3>
+                                <p>Bu yıl eSIM teknolojisinde beklediğimiz en önemli gelişmeler şunlar:</p>
+
+                                <ul class="custom-list">
+                                    <li><strong>Global Yaygınlaşma:</strong> Daha fazla ülke ve operatör eSIM desteği
+                                        sunacak</li>
+                                    <li><strong>IoT Entegrasyonu:</strong> Akıllı cihazlarda eSIM kullanımı artacak</li>
+                                    <li><strong>Gelişmiş Güvenlik:</strong> Yeni şifreleme teknolojileri ile daha
+                                        güvenli bağlantılar</li>
+                                    <li><strong>Çoklu Profil Desteği:</strong> Tek cihazda birden fazla operatör profili
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="info-box mb-4">
+                                <div class="info-box-icon">
+                                    <i class='bx bx-info-circle'></i>
+                                </div>
+                                <div class="info-box-content">
+                                    <h5>Bilmeniz Gereken!</h5>
+                                    <p>eSIM teknolojisi sadece telefonlarda değil, tabletler, akıllı saatler ve hatta
+                                        arabalarda da kullanılmaya başlandı. Gelecekte ev eşyalarından sağlık
+                                        cihazlarına kadar her alanda göreceğiz.</p>
+                                </div>
+                            </div>
+
+                            <div class="content-section mb-4">
+                                <h3>Seyahat Deneyimindeki Değişim</h3>
+                                <p>eSIM'in en büyük avantajlarından biri seyahat kolaylığı sağlaması. Artık yurt dışına
+                                    çıktığınızda:</p>
+
+                                <div class="feature-grid">
+                                    <div class="feature-item">
+                                        <div class="feature-icon">
+                                            <i class='bx bx-world'></i>
+                                        </div>
+                                        <h5>Anında Bağlantı</h5>
+                                        <p>Havaalanında indikten hemen sonra internete bağlanabilirsiniz</p>
+                                    </div>
+                                    <div class="feature-item">
+                                        <div class="feature-icon">
+                                            <i class='bx bx-money'></i>
+                                        </div>
+                                        <h5>Uygun Fiyatlar</h5>
+                                        <p>Roaming ücretlerinden kaçınarak daha ekonomik çözümler bulabilirsiniz</p>
+                                    </div>
+                                    <div class="feature-item">
+                                        <div class="feature-icon">
+                                            <i class='bx bx-cog'></i>
+                                        </div>
+                                        <h5>Kolay Yönetim</h5>
+                                        <p>Telefon ayarlarından kolayca operatör değiştirebilirsiniz</p>
+                                    </div>
+                                    <div class="feature-item">
+                                        <div class="feature-icon">
+                                            <i class='bx bx-shield'></i>
+                                        </div>
+                                        <h5>Güvenlik</h5>
+                                        <p>Fiziksel SIM kart kaybetme riski tamamen ortadan kalkar</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="quote-box mb-4">
+                                <blockquote>
+                                    "eSIM teknolojisi, mobil iletişimin geleceğini şekillendiren en önemli yeniliklerden
+                                    biri. Gelecek 5 yıl içinde fiziksel SIM kartlar neredeyse tamamen ortadan kalkacak."
+                                </blockquote>
+                                <cite>- Prof. Dr. Mehmet Özkan, Telekomünikasyon Uzmanı</cite>
+                            </div>
+
+                            <div class="content-section mb-4">
+                                <h3>İşletmeler İçin Fırsatlar</h3>
+                                <p>eSIM teknolojisi sadece bireysel kullanıcılar için değil, işletmeler için de büyük
+                                    avantajlar sunuyor:</p>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="advantage-item">
+                                            <h5><i class='bx bx-check-circle'></i> Operasyonel Kolaylık</h5>
+                                            <p>Çok sayıda cihazı uzaktan yönetebilme imkanı</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="advantage-item">
+                                            <h5><i class='bx bx-check-circle'></i> Maliyet Azaltma</h5>
+                                            <p>SIM kart yönetimi ve değişim maliyetlerinin ortadan kalkması</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="advantage-item">
+                                            <h5><i class='bx bx-check-circle'></i> Hızlı Deployment</h5>
+                                            <p>Yeni lokasyonlarda hızlı servis başlatma</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="advantage-item">
+                                            <h5><i class='bx bx-check-circle'></i> Global Ölçeklenebilirlik</h5>
+                                            <p>Dünya çapında tek platformdan yönetim</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="content-section">
+                                <h3>Sonuç</h3>
+                                <p>eSIM teknolojisi hızla gelişiyor ve 2025 yılında daha da yaygınlaşacak. Bu teknoloji,
+                                    sadece telekomünikasyon sektörünü değil, IoT, otomotiv ve sağlık gibi birçok sektörü
+                                    de dönüştürecek. eSIM'e geçiş yapmayı düşünüyorsanız, şimdi doğru zaman!</p>
+                            </div>
+                        </div>
+
+                        <!-- Post Footer -->
+                        <div class="post-footer mt-5">
+                            <div class="post-tags mb-4">
+                                <h6>Etiketler:</h6>
+                                <a href="#" class="tag-item">eSIM</a>
+                                <a href="#" class="tag-item">Teknoloji</a>
+                                <a href="#" class="tag-item">2025</a>
+                                <a href="#" class="tag-item">Mobil</a>
+                                <a href="#" class="tag-item">Gelecek</a>
+                            </div>
+
+                            <div class="social-share mb-4">
+                                <h6>Paylaş:</h6>
+                                <div class="share-buttons">
+                                    <a href="#" class="share-btn facebook" data-bs-toggle="tooltip"
+                                        title="Facebook'ta Paylaş">
+                                        <i class='bx bxl-facebook'></i>
+                                    </a>
+                                    <a href="#" class="share-btn twitter" data-bs-toggle="tooltip"
+                                        title="Twitter'da Paylaş">
+                                        <i class='bx bxl-twitter'></i>
+                                    </a>
+                                    <a href="#" class="share-btn linkedin" data-bs-toggle="tooltip"
+                                        title="LinkedIn'de Paylaş">
+                                        <i class='bx bxl-linkedin'></i>
+                                    </a>
+                                    <a href="#" class="share-btn whatsapp" data-bs-toggle="tooltip"
+                                        title="WhatsApp'ta Paylaş">
+                                        <i class='bx bxl-whatsapp'></i>
+                                    </a>
+                                    <a href="#" class="share-btn copy-link" data-bs-toggle="tooltip"
+                                        title="Linki Kopyala">
+                                        <i class='bx bx-link'></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Navigation -->
+                            <div class="post-navigation">
+                                <div class="nav-item prev-post">
+                                    <a href="#" class="nav-link">
+                                        <div class="nav-direction">
+                                            <i class='bx bx-chevron-left'></i>
+                                            <span>Önceki Yazı</span>
+                                        </div>
+                                        <h6>eSIM Güvenliği: Bilmeniz Gerekenler</h6>
+                                    </a>
+                                </div>
+                                <div class="nav-item next-post">
+                                    <a href="#" class="nav-link">
+                                        <div class="nav-direction">
+                                            <span>Sonraki Yazı</span>
+                                            <i class='bx bx-chevron-right'></i>
+                                        </div>
+                                        <h6>5G ve eSIM: Mükemmel Birliktelik</h6>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Comments Section -->
+                    <div class="comments-section mt-5" data-aos="fade-up">
+                        <h4 class="comments-title">Yorumlar (3)</h4>
+
+                        <div class="comments-list">
+                            <div class="comment-item">
+                                <div class="comment-avatar">
+                                    <img src="https://via.placeholder.com/50x50/667eea/ffffff?text=AY" alt="Avatar">
+                                </div>
+                                <div class="comment-content">
+                                    <div class="comment-header">
+                                        <h6 class="comment-author">Ali Yılmaz</h6>
+                                        <span class="comment-date">2 gün önce</span>
+                                    </div>
+                                    <p class="comment-text">Çok faydalı bir yazı olmuş. eSIM teknolojisi gerçekten
+                                        geleceğin teknolojisi. Ben de geçen ay eSIM'e geçtim, çok memnunum.</p>
+                                    <button class="comment-reply-btn">
+                                        <i class='bx bx-reply'></i>
+                                        Yanıtla
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="comment-item">
+                                <div class="comment-avatar">
+                                    <img src="https://via.placeholder.com/50x50/764ba2/ffffff?text=EK" alt="Avatar">
+                                </div>
+                                <div class="comment-content">
+                                    <div class="comment-header">
+                                        <h6 class="comment-author">Elif Kaya</h6>
+                                        <span class="comment-date">1 gün önce</span>
+                                    </div>
+                                    <p class="comment-text">Seyahatlerde çok işime yarıyor eSIM. Artık SIM kart aramayla
+                                        uğraşmıyorum. Teşekkürler bilgilendirme için!</p>
+                                    <button class="comment-reply-btn">
+                                        <i class='bx bx-reply'></i>
+                                        Yanıtla
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="comment-item">
+                                <div class="comment-avatar">
+                                    <img src="https://via.placeholder.com/50x50/f093fb/ffffff?text=MD" alt="Avatar">
+                                </div>
+                                <div class="comment-content">
+                                    <div class="comment-header">
+                                        <h6 class="comment-author">Mehmet Demir</h6>
+                                        <span class="comment-date">12 saat önce</span>
+                                    </div>
+                                    <p class="comment-text">2025'te hangi telefonların eSIM destekleyeceği hakkında daha
+                                        detaylı bilgi verebilir misiniz?</p>
+                                    <button class="comment-reply-btn">
+                                        <i class='bx bx-reply'></i>
+                                        Yanıtla
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Comment Form -->
+                        <div class="comment-form mt-5">
+                            <h5 class="form-title">Yorum Yap</h5>
+                            <form id="commentForm">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <input type="text" class="form-control" placeholder="Adınız *" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <input type="email" class="form-control" placeholder="E-posta Adresiniz *"
+                                            required>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <textarea class="form-control" rows="5" placeholder="Yorumunuz *"
+                                        required></textarea>
+                                </div>
+                                <div class="form-check mb-3">
+                                    <input class="form-check-input" type="checkbox" id="privacyCheck" required>
+                                    <label class="form-check-label" for="privacyCheck">
+                                        <a href="#">Gizlilik Politikası</a>'nı okudum ve kabul ediyorum.
+                                    </label>
+                                </div>
+                                <button type="submit" class="btn btn-primary comment-submit-btn">
+                                    <i class='bx bx-send'></i>
+                                    Yorumu Gönder
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-3 col-md-12">
+                    <div class="blog-sidebar" data-aos="fade-left">
+
+
+
+                        <!-- Recent Posts -->
+                        <div class="sidebar-widget recent-posts-widget mb-4">
+                            <h5 class="widget-title">Son Yazılar</h5>
+                            <div class="recent-posts-list">
+                                <article class="recent-post-item">
+                                    <div class="recent-post-thumb">
+                                        <img src="https://via.placeholder.com/80x60/667eea/ffffff?text=eSIM" alt="Blog">
+                                    </div>
+                                    <div class="recent-post-content">
+                                        <h6 class="recent-post-title"><a href="#">2025'te eSIM Kullanımı Nasıl
+                                                Artacak?</a>
+                                        </h6>
+                                        <span class="recent-post-date">15 Ocak 2025</span>
+                                    </div>
+                                </article>
+
+                                <article class="recent-post-item">
+                                    <div class="recent-post-thumb">
+                                        <img src="https://via.placeholder.com/80x60/764ba2/ffffff?text=Travel"
+                                            alt="Blog">
+                                    </div>
+                                    <div class="recent-post-content">
+                                        <h6 class="recent-post-title"><a href="#">Seyahatte eSIM Kullanmanın 10
+                                                Avantajı</a>
+                                        </h6>
+                                        <span class="recent-post-date">12 Ocak 2025</span>
+                                    </div>
+                                </article>
+
+                                <article class="recent-post-item">
+                                    <div class="recent-post-thumb">
+                                        <img src="https://via.placeholder.com/80x60/f093fb/ffffff?text=Guide"
+                                            alt="Blog">
+                                    </div>
+                                    <div class="recent-post-content">
+                                        <h6 class="recent-post-title"><a href="#">iPhone'da eSIM Kurulum Rehberi</a>
+                                        </h6>
+                                        <span class="recent-post-date">10 Ocak 2025</span>
+                                    </div>
+                                </article>
+
+                                <article class="recent-post-item">
+                                    <div class="recent-post-thumb">
+                                        <img src="https://via.placeholder.com/80x60/4facfe/ffffff?text=Security"
+                                            alt="Blog">
+                                    </div>
+                                    <div class="recent-post-content">
+                                        <h6 class="recent-post-title"><a href="#">eSIM Güvenliği ve Gizlilik
+                                                İpuçları</a></h6>
+                                        <span class="recent-post-date">8 Ocak 2025</span>
+                                    </div>
+                                </article>
+
+                                <article class="recent-post-item">
+                                    <div class="recent-post-thumb">
+                                        <img src="https://via.placeholder.com/80x60/00d2ff/ffffff?text=5G" alt="Blog">
+                                    </div>
+                                    <div class="recent-post-content">
+                                        <h6 class="recent-post-title"><a href="#">5G ve eSIM: Mükemmel Uyum</a></h6>
+                                        <span class="recent-post-date">5 Ocak 2025</span>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+
+                        <!-- Tags -->
+                        <div class="sidebar-widget tags-widget">
+                            <h5 class="widget-title">Etiketler</h5>
+                            <div class="tag-cloud">
+                                <a href="#" class="tag-item">eSIM</a>
+                                <a href="#" class="tag-item">Teknoloji</a>
+                                <a href="#" class="tag-item">Seyahat</a>
+                                <a href="#" class="tag-item">Mobil</a>
+                                <a href="#" class="tag-item">İnternet</a>
+                                <a href="#" class="tag-item">Güvenlik</a>
+                                <a href="#" class="tag-item">5G</a>
+                                <a href="#" class="tag-item">iOS</a>
+                                <a href="#" class="tag-item">Android</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Posts Section -->
+    <section class="related-posts-section py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5" data-aos="fade-up">
+                    <h3 class="section-title">İlgili Yazılar</h3>
+                    <p class="section-subtitle">Sizi ilgilendirebilecek diğer blog yazılarımız</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <article class="related-post-card">
+                        <div class="related-post-image">
+                            <img src="https://via.placeholder.com/350x200/667eea/ffffff?text=eSIM+Security"
+                                alt="eSIM Güvenliği">
+                            <div class="related-post-category">Güvenlik</div>
+                        </div>
+                        <div class="related-post-content">
+                            <div class="related-post-meta">
+                                <span><i class='bx bx-calendar'></i> 15 Ocak 2025</span>
+                                <span><i class='bx bx-time'></i> 4 dk</span>
+                            </div>
+                            <h5 class="related-post-title"><a href="#">eSIM Güvenliği ve Veri Koruması İpuçları</a></h5>
+                            <p class="related-post-excerpt">eSIM teknolojisinin güvenlik özellikleri ve kişisel
+                                verilerinizi
+                                nasıl koruyacağınız hakkında...</p>
+                            <a href="#" class="read-more">Devamını Oku <i class='bx bx-right-arrow-alt'></i></a>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <article class="related-post-card">
+                        <div class="related-post-image">
+                            <img src="https://via.placeholder.com/350x200/764ba2/ffffff?text=Travel+Guide"
+                                alt="Seyahat Rehberi">
+                            <div class="related-post-category">Seyahat</div>
+                        </div>
+                        <div class="related-post-content">
+                            <div class="related-post-meta">
+                                <span><i class='bx bx-calendar'></i> 12 Ocak 2025</span>
+                                <span><i class='bx bx-time'></i> 6 dk</span>
+                            </div>
+                            <h5 class="related-post-title"><a href="#">Seyahatte eSIM: Komple Kullanım Rehberi</a></h5>
+                            <p class="related-post-excerpt">Yurt dışı seyahatlerinizde eSIM'i en verimli şekilde nasıl
+                                kullanacağınızı öğrenin...</p>
+                            <a href="#" class="read-more">Devamını Oku <i class='bx bx-right-arrow-alt'></i></a>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <article class="related-post-card">
+                        <div class="related-post-image">
+                            <img src="https://via.placeholder.com/350x200/f093fb/ffffff?text=5G+eSIM" alt="5G eSIM">
+                            <div class="related-post-category">Teknoloji</div>
+                        </div>
+                        <div class="related-post-content">
+                            <div class="related-post-meta">
+                                <span><i class='bx bx-calendar'></i> 10 Ocak 2025</span>
+                                <span><i class='bx bx-time'></i> 5 dk</span>
+                            </div>
+                            <h5 class="related-post-title"><a href="#">5G Ağlarda eSIM Performansı</a></h5>
+                            <p class="related-post-excerpt">5G teknolojisi ile eSIM birlikteliğinin sunduğu hız ve
+                                performans
+                                avantajları...</p>
+                            <a href="#" class="read-more">Devamını Oku <i class='bx bx-right-arrow-alt'></i></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer bg-dark text-white pt-5 pb-4 position-relative z-5">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <h5 class="footer-title">eSIMHızlı</h5>
+                    <p class="small">Seyahatinizde hızlı, uygun fiyatlı ve sorunsuz internetin adresi. Global kapsama
+                        ile her yerde bağlı kalın.</p>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <h6 class="footer-heading">Hızlı Linkler</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="#populer" class="footer-link">Popüler Ülkeler</a></li>
+                        <li><a href="#neden" class="footer-link">Neden Biz?</a></li>
+                        <li><a href="#nasıl" class="footer-link">Nasıl Çalışır?</a></li>
+                        <li><a href="#yorumlar" class="footer-link">Yorumlar</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <h6 class="footer-heading">İletişim</h6>
+                    <ul class="list-unstyled small">
+                        <li><i class="bx bx-envelope me-2"></i> destek@esimhizli.com</li>
+                        <li><i class="bx bx-map me-2"></i> İstanbul, Türkiye</li>
+                    </ul>
+                    <div class="social-icons mt-3">
+                        <a href="#" class="social-icon"><i class="bx bxl-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="bx bxl-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="bx bxl-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="bx bxl-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-12">
+                    <p class="small mb-0">&copy; 2025 eSIMHızlı. Tüm hakları saklıdır.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
