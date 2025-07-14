@@ -15,7 +15,7 @@
         href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
@@ -75,7 +75,7 @@
                     <div class="navbar-nav ms-auto">
 
 
-                        <div class="dropdown">
+                        <!-- <div class="dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button">
                                 <i class='bx bx-sim'></i>
                                 eSIM Paketleri
@@ -103,7 +103,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
 
                         <div class="dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button">
@@ -191,26 +191,51 @@
                             <i class='bx bx-user-circle'></i>
                             Hesabım
                         </a> -->
-
-                        <!-- Dil Seçeneği -->
-                        <div class="dropdown language-dropdown">
+                        <div class="dropdown currency-dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button">
                                 <i class='bx bx-globe'></i>
-                                <span class="language-text">TR</span>
+                                <span class="currency-text">TR</span>
                                 <i class='bx bx-chevron-down'></i>
                             </a>
-                            <div class="dropdown-menu dropdown-menu-end" style="top: 30px;">
-                                <a class="dropdown-item language-item active" href="#" data-lang="tr">
+                            <div class="dropdown-menu dropdown-menu-end" style="top: 36px;">
+                                <a class="dropdown-item currency-item active" href="#" data-lang="tr">
                                     <img src="https://flagcdn.com/w20/tr.png" alt="Türkçe" class="flag-icon">
                                     <span>Türkçe</span>
                                 </a>
-                                <a class="dropdown-item language-item" href="#" data-lang="en">
+                                <a class="dropdown-item currency-item" href="#" data-lang="en">
                                     <img src="https://flagcdn.com/w20/us.png" alt="English" class="flag-icon">
                                     <span>English</span>
                                 </a>
-                                <a class="dropdown-item language-item" href="#" data-lang="ar">
+                                <a class="dropdown-item currency-item" href="#" data-lang="ar">
                                     <img src="https://flagcdn.com/w20/sa.png" alt="العربية" class="flag-icon">
                                     <span>العربية</span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Döviz Kuru Seçeneği -->
+                        <div class="dropdown currency-dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button">
+                                <i class='bx bx-dollar-circle'></i>
+                                <span class="currency-text">TRY</span>
+                                <i class='bx bx-chevron-down'></i>
+                            </a>
+
+                            <div class="dropdown-menu dropdown-menu-end" style="top: 36px;">
+                                <a class="dropdown-item currency-item active" href="#" data-currency="try">
+                                    <i class='bx bx-lira currency-icon'></i>
+                                    <span>TRY - Türk Lirası</span>
+                                </a>
+                                <a class="dropdown-item currency-item" href="#" data-currency="usd">
+                                    <i class='bx bx-dollar currency-icon'></i>
+                                    <span>USD - Amerikan Doları</span>
+                                </a>
+                                <a class="dropdown-item currency-item" href="#" data-currency="eur">
+                                    <i class='bx bx-euro currency-icon'></i>
+                                    <span>EUR - Euro</span>
+                                </a>
+                                <a class="dropdown-item currency-item" href="#" data-currency="gbp">
+                                    <i class='bx bx-pound currency-icon'></i>
+                                    <span>GBP - İngiliz Sterlini</span>
                                 </a>
                             </div>
                         </div>
@@ -809,7 +834,56 @@
         </div>
     </section>
 
-
+    <!-- FAQ Section -->
+    <div class="container my-5">
+        <div class="country-features-section" data-aos="fade-up">
+            <h2 class="country-section-title">Sıkça Sorulan Sorular</h2>
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item border-0 mb-3 rounded-3">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button rounded-3" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq1">
+                            eSIM nedir ve nasıl çalışır?
+                        </button>
+                    </h2>
+                    <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            eSIM, telefonunuzun içine gömülü bir SIM kart teknolojisidir. Fiziksel SIM kart değiştirmeye
+                            gerek kalmadan, dijital olarak operatör değiştirebilirsiniz.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item border-0 mb-3 rounded-3">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed rounded-3" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq2">
+                            Hangi cihazlar eSIM destekler?
+                        </button>
+                    </h2>
+                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            iPhone XS ve sonrası, Google Pixel 3 ve sonrası, Samsung Galaxy S20 ve sonrası dahil olmak
+                            üzere birçok modern akıllı telefon eSIM destekler.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item border-0 mb-3 rounded-3">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed rounded-3" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq3">
+                            eSIM'i nasıl yüklerim?
+                        </button>
+                    </h2>
+                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Satın aldığınız eSIM ile birlikte QR kod ve aktivasyon talimatları gönderilir. Telefonunuzun
+                            ayarlarından eSIM ekle seçeneğini kullanarak QR kodu taratmanız yeterlidir.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <footer class="footer bg-dark text-white pt-5 pb-4 position-relative z-5">
@@ -857,7 +931,7 @@
         crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="/js/script.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>

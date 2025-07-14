@@ -5,8 +5,8 @@ AOS.init({
 
 $(document).ready(function () {
 
-    // Smooth scrolling for anchor links
-    $('a[href^="#"]:not([href="#"])').on('click', function (event) {
+    // Smooth scrolling for anchor links (excluding sidebar items)
+    $('a[href^="#"]:not([href="#"]):not(.sidebar-item)').on('click', function (event) {
         let target = $(this.getAttribute('href'));
         if (target.length) {
             event.preventDefault();
@@ -934,6 +934,11 @@ function initializeProfilePage() {
 
     // Animate stats on page load
     animateProfileStats();
+
+    // Handle initial hash after everything is fully loaded
+    setTimeout(function () {
+        handleInitialHash();
+    }, 100);
 }
 
 function initializeSidebarNavigation() {
@@ -953,21 +958,26 @@ function initializeSidebarNavigation() {
         // Show target section with animation
         $(`#${target}`).addClass('active');
 
-        // Smooth scroll to top of content
-        $('html, body').animate({
-            scrollTop: $('.profile-content').offset().top - 100
-        }, 500);
-
-        // Update URL hash
-        window.location.hash = target;
+        // Update URL hash without triggering scroll
+        history.replaceState(null, null, `#${target}`);
     });
+}
 
-    // Handle initial hash
+function handleInitialHash() {
+    // Handle initial hash after everything is loaded
     if (window.location.hash) {
         const hash = window.location.hash.substring(1);
         const targetItem = $(`.sidebar-item[data-target="${hash}"]`);
-        if (targetItem.length) {
-            targetItem.trigger('click');
+        const targetSection = $(`#${hash}`);
+
+        if (targetItem.length && targetSection.length) {
+            // Remove active class from all items
+            $('.sidebar-item').removeClass('active');
+            $('.profile-section').removeClass('active');
+
+            // Add active class to target item
+            targetItem.addClass('active');
+            targetSection.addClass('active');
         }
     }
 }

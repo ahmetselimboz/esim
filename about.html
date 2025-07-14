@@ -15,7 +15,7 @@
         href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
@@ -74,7 +74,7 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <div class="navbar-nav ms-auto">
 
-
+<!-- 
                         <div class="dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button">
                                 <i class='bx bx-sim'></i>
@@ -103,7 +103,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
 
                         <div class="dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button">
@@ -182,25 +182,51 @@
                                 </a>
                             </div>
                         </div>
-                           <!-- Dil Seçeneği -->
-                           <div class="dropdown language-dropdown">
+                        <div class="dropdown currency-dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button">
                                 <i class='bx bx-globe'></i>
-                                <span class="language-text">TR</span>
+                                <span class="currency-text">TR</span>
                                 <i class='bx bx-chevron-down'></i>
                             </a>
-                            <div class="dropdown-menu dropdown-menu-end" style="top: 30px;">
-                                <a class="dropdown-item language-item active" href="#" data-lang="tr">
+                            <div class="dropdown-menu dropdown-menu-end" style="top: 36px;">
+                                <a class="dropdown-item currency-item active" href="#" data-lang="tr">
                                     <img src="https://flagcdn.com/w20/tr.png" alt="Türkçe" class="flag-icon">
                                     <span>Türkçe</span>
                                 </a>
-                                <a class="dropdown-item language-item" href="#" data-lang="en">
+                                <a class="dropdown-item currency-item" href="#" data-lang="en">
                                     <img src="https://flagcdn.com/w20/us.png" alt="English" class="flag-icon">
                                     <span>English</span>
                                 </a>
-                                <a class="dropdown-item language-item" href="#" data-lang="ar">
+                                <a class="dropdown-item currency-item" href="#" data-lang="ar">
                                     <img src="https://flagcdn.com/w20/sa.png" alt="العربية" class="flag-icon">
                                     <span>العربية</span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Döviz Kuru Seçeneği -->
+                        <div class="dropdown currency-dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button">
+                                <i class='bx bx-dollar-circle'></i>
+                                <span class="currency-text">TRY</span>
+                                <i class='bx bx-chevron-down'></i>
+                            </a>
+                           
+                            <div class="dropdown-menu dropdown-menu-end" style="top: 36px;">
+                                <a class="dropdown-item currency-item active" href="#" data-currency="try">
+                                    <i class='bx bx-lira currency-icon'></i>
+                                    <span>TRY - Türk Lirası</span>
+                                </a>
+                                <a class="dropdown-item currency-item" href="#" data-currency="usd">
+                                    <i class='bx bx-dollar currency-icon'></i>
+                                    <span>USD - Amerikan Doları</span>
+                                </a>
+                                <a class="dropdown-item currency-item" href="#" data-currency="eur">
+                                    <i class='bx bx-euro currency-icon'></i>
+                                    <span>EUR - Euro</span>
+                                </a>
+                                <a class="dropdown-item currency-item" href="#" data-currency="gbp">
+                                    <i class='bx bx-pound currency-icon'></i>
+                                    <span>GBP - İngiliz Sterlini</span>
                                 </a>
                             </div>
                         </div>
@@ -596,7 +622,7 @@
         crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>

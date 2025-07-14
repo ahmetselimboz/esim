@@ -417,98 +417,7 @@ body {
     }
 }
 
-/* Language Dropdown Styles */
-.language-dropdown {
-    position: relative;
-    margin-right: 15px;
-}
 
-.language-dropdown .nav-link {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    color: #667eea;
-    text-decoration: none;
-    padding: 8px 12px;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-    font-weight: 500;
-    min-width: 80px;
-}
-
-.language-dropdown .nav-link:hover {
-    background: rgba(102, 126, 234, 0.1);
-    color: #667eea;
-}
-
-.language-dropdown .language-text {
-    font-size: 14px;
-    font-weight: 600;
-}
-
-.language-dropdown .dropdown-menu {
-    background: white;
-    border: none;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    padding: 8px 0;
-    min-width: 160px;
-    margin-top: 8px;
-}
-
-.language-dropdown .dropdown-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 10px 16px;
-    color: #333;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    border: none;
-    background: none;
-}
-
-.language-dropdown .dropdown-item:hover {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-}
-
-.language-dropdown .dropdown-item.active {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    font-weight: 600;
-}
-
-.language-dropdown .flag-icon {
-    width: 20px;
-    height: 15px;
-    border-radius: 2px;
-    object-fit: cover;
-}
-
-/* Responsive Language Dropdown */
-@media (max-width: 991px) {
-    .language-dropdown {
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-
-    .language-dropdown .nav-link {
-        justify-content: center;
-        width: 100%;
-        background: rgba(102, 126, 234, 0.1);
-        margin-bottom: 10px;
-    }
-
-    .language-dropdown .dropdown-menu {
-        position: static !important;
-        transform: none !important;
-        box-shadow: none;
-        background: rgba(255, 255, 255, 0.95);
-        border-radius: 8px;
-        margin-top: 0;
-    }
-}
 
 /* Scroll Effect */
 .navbar-hidden {
@@ -7899,5 +7808,150 @@ input:checked+.toggle-slider:before {
     100% {
         opacity: 1;
         transform: scale(1);
+    }
+}
+
+/* Döviz Kuru Seçeneği Stilleri */
+.currency-dropdown {
+    position: relative;
+}
+
+.currency-dropdown .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #667eea;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    min-width: 80px;
+}
+
+.currency-dropdown .nav-link:hover {
+    background: rgba(102, 126, 234, 0.2);
+    border-color: #667eea;
+    color: #667eea;
+}
+
+.currency-dropdown .currency-text {
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.currency-dropdown .dropdown-menu {
+    min-width: 220px;
+    border: none;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    padding: 8px 0;
+    background: white;
+    overflow: hidden;
+}
+
+.currency-dropdown .dropdown-item {
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #333;
+    transition: all 0.3s ease;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.currency-dropdown .dropdown-item:hover {
+    background: rgba(102, 126, 234, 0.1);
+    color: #667eea;
+    transform: translateX(4px);
+}
+
+.currency-dropdown .dropdown-item.active {
+    background: rgba(102, 126, 234, 0.15);
+    color: #667eea;
+    font-weight: 600;
+}
+
+.currency-dropdown .currency-icon {
+    width: 18px;
+    height: 18px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #667eea;
+}
+
+/* Mobil Uyumluluk */
+@media (max-width: 991px) {
+    .currency-dropdown {
+        margin-left: 0;
+    }
+
+    .currency-dropdown .nav-link {
+        padding: 10px 16px;
+        font-size: 13px;
+    }
+
+    .currency-dropdown .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        border: 1px solid rgba(102, 126, 234, 0.2);
+        margin-top: 8px;
+        width: 100%;
+        min-width: auto;
+    }
+}
+
+/* Döviz Kuru Seçeneği Animasyonları */
+.currency-dropdown .dropdown-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.currency-dropdown .dropdown-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.currency-dropdown .dropdown-item:hover::before {
+    left: 100%;
+}
+
+.currency-dropdown .nav-link i:last-child {
+    transition: transform 0.3s ease;
+}
+
+.currency-dropdown:hover .nav-link i:last-child {
+    transform: rotate(180deg);
+}
+
+/* Döviz Kuru Seçeneği Özel Efektler */
+.currency-dropdown .currency-icon {
+    position: relative;
+    z-index: 1;
+}
+
+.currency-dropdown .dropdown-item:hover .currency-icon {
+    animation: currencyPulse 0.6s ease-in-out;
+}
+
+@keyframes currencyPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
     }
 }
